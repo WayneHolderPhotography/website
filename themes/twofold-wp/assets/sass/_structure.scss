@@ -1,0 +1,31 @@
+#wrapper {
+	min-height: 100vh;
+	flex-direction: column;
+	overflow: hidden;
+	
+	.contact_layout_style2 &{
+		overflow: auto;
+	}
+}
+.row {
+	min-width: 100%;
+	
+	&.masonry-blog {
+		.columns {
+			@include min-break($break-medium) {
+				padding: 0 20px;	
+			}
+		}
+	}
+	&.full-width-row {
+		max-width: none;
+		
+		&.with-padding {
+			padding: 0 15px;
+			
+			@include min-break($break-small) {
+				padding: 0 20px;	
+			}
+		}
+	}
+}

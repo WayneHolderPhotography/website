@@ -1,0 +1,250 @@
+form {
+	margin: 0;
+
+	fieldset {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+	border: 1px solid #eee;
+	padding: 12px 15px;
+	margin-bottom: 16px;
+	color: rgba(0,0,0,0.6);
+	font-size: 12px;
+	font-weight: 500;
+	background: #eee;
+	max-width: 100%;
+	outline: 0;
+	font-family: inherit;
+	border-radius: 0;
+	@include box-shadow(none);
+	@include appearance(none);
+	@extend .transition;
+	&:focus {
+		background: #fff;
+		border-color: $color1;
+		color: $color1;
+		box-shadow: none;
+		outline: 0;
+	}
+
+	&.parsley-error,
+	&.wpcf7-not-valid,
+	.woocommerce-invalid-required-field &{
+		border-color: #e76049;
+	}
+	&.full,
+	.woocommerce-MyAccount-content &,
+	.woocommerce-checkout & {
+		width: 100%;
+	}
+	.wpcf7-form & {
+		margin-bottom: 0;
+	}
+	@include input-placeholder { 
+		text-transform: uppercase;
+		color: #b0b0b0;
+		font-size: 12px;
+		font-weight: 600;
+	};
+
+}
+.parsley-error-list,
+.wpcf7-not-valid-tip,
+.screen-reader-response {
+	display: none !important;
+}
+.wpcf7-form-control-wrap {
+	display: block;
+	width: 100%;
+}
+label {
+	font-size: 11px;
+	display: inline-block;
+	color: $color1;
+	margin: 0 0 8px;
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
+	clear: both;
+	small {
+		font-size: 10px;
+		color: $color2;	
+	}
+	.woocommerce-checkout & {
+		font-size: 14px;
+		font-weight: 500;
+	}
+}
+textarea {
+	min-height: 108px;
+
+	.wpcf7-form & {
+		min-height: 200px;
+	}
+	.review-popup & {
+		min-height: 150px;	
+	}
+}
+.btn,
+.button:not(.selectric-button),
+.submit {
+	display: inline-block;
+	vertical-align: middle;
+	border: 2px solid $color1;
+	background: transparent;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 600;
+	color: $color1;
+	line-height: 34px;
+	padding: 0 35px;
+	@extend .titlefont;
+	@extend .quick-transition;
+	
+	&:focus {
+		outline: 0;
+	}
+	&:hover {
+		border-color: $color3;
+		background: $color3;
+		color: $color1;
+	}
+	&.single_add_to_cart_button,
+	&.large {
+		font-size: 14px;
+		line-height: 46px;
+		font-weight: 600;
+	}
+	&.grey {
+		background: #cdcdcd;
+		border-color: #cdcdcd;
+		color: $color1;
+		
+		&:hover {
+			border-color: lighten(#cdcdcd, 10%);
+			background: lighten(#cdcdcd, 10%);	
+		}
+	}
+	&.alt,
+	.shipping-calculator-form & {
+		background: $color3;
+		color: $color1;
+		border-color: $color3;	
+		padding: 0 15px;
+		&:hover {
+			border-color: lighten($color3, 10%);
+			background: lighten($color3, 10%);
+		}
+	}
+	.shipping-calculator-form & {
+		width: 100%;	
+	}
+	&.black,
+	&.single_add_to_cart_button {
+		background: $color1;
+		border-color: $color1;
+		color: #fff;
+		
+		&:hover {
+			background: $color2;
+			border-color: $color2;	
+		}
+		.dark-colors & {
+			
+		}
+	}
+	&.full {
+		width: 100%;
+	}
+	&.rounded {
+		border-radius: 500px;
+		background: #fff;
+		border-color: #fff;
+		box-shadow: 0px 2px 6px rgba(#000, 0.1);
+		&:hover {
+			background: $color3;
+			border-color: $color3;	
+		}
+	}
+}
+.marker-info-win {
+	width: 300px;
+	padding: 15px;
+	background: #fff;
+	
+	@include min-break($break-small) {
+		width: 360px;
+		padding: 30px;
+	}
+	p {
+		font-size: 13px;
+		line-height: 16px;
+		color: #737373;
+		font-weight: 300;
+		margin: 0;
+	}
+}
+.video-container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	&>* {
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  min-width: 100% !important;
+	  height: 100vh;
+	  @include translateX(-50%);
+	}
+}
+.select2-container {
+	font-size: 14px;
+	margin-bottom: 16px;
+	.select2-choice {
+		border-color: #eee;
+		background: #eee;
+		border-radius: 0 !important;
+		padding: 12px 15px;
+		line-height: 1;
+	}
+	&.select2-container-active {
+		.select2-choice {
+			border-color: $color1;
+			background: #fff;	
+		}
+	}
+}
+.select2-drop {
+	.select2-results {
+		background: #fff;
+	}
+}
+.select2-search {
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	.select2-input {
+		margin-bottom: 5px;
+	}
+}
+.select2-drop-active {
+	border-color: $color1;
+}

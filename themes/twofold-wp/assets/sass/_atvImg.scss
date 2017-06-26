@@ -1,0 +1,64 @@
+.atvImg {
+	z-index: 1;
+	transform-style: preserve-3d;
+	-webkit-tap-highlight-color: rgba(#000,0);
+	backface-visibility: hidden;
+	&:hover {
+		z-index: 2;	
+	}
+}
+
+.atvImg-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.atvImg-container.over .atvImg-shadow {
+	box-shadow: 0 25px 60px rgba(14,21,47,0.3), 0 10px 20px rgba(14,21,47,0.5);
+}
+
+.atvImg-layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 0px solid #0ec962;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	@extend .quick-transition;
+}
+
+.atvImg-rendered-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0; 
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: cover;
+	transition: all 0.1s ease-out;
+}
+
+.atvImg-shadow {
+	position: absolute;
+	top: 5%; 
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	transition: all 0.2s ease-out;
+
+}
+
+.atvImg-shine {
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+	
+	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 40%);
+}

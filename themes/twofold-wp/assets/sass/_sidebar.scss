@@ -1,0 +1,146 @@
+.widget-title {
+	background: $color1;
+	display: block;
+	margin-bottom: 20px;	
+	font-size: 14px;
+	line-height: 1;
+	color: #fff;
+	text-transform: uppercase;
+}
+.widget {
+	color: #a8a8a8;
+	margin-bottom: 10px;
+	font-size: 14px;
+	background: $color1;
+	
+	h6 {
+		@extend .widget-title;
+		position: relative;
+		margin: 0;
+		padding: 12px 15px;
+		cursor: pointer;
+		@include min-break($break-small) {
+			padding: 22px 30px;	
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 18px;
+			right: 23px;
+			width: 11px;
+			height: 1px;
+			background: #a4a4a4;
+			
+			@include min-break($break-small) {
+				top: 27px;
+			}
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 13px;
+			right: 28px;
+			width: 1px;
+			height: 11px;
+			background: #a4a4a4;
+			@include scale(1,1);
+			@extend .quick-transition;
+			
+			@include min-break($break-small) {
+				top: 22px;
+			}
+		}
+	}
+	&:not(.active) {
+		h6 {
+			&:before {
+				@include scale(1,0);
+			}	
+		}
+	}
+	.widget_content {
+		padding: 10px 15px;
+		border-top: 1px solid #333;
+		overflow: hidden;
+		@extend .quick-transition;
+		@include min-break($break-small) {
+			padding: 25px 30px;	
+		}
+	}
+	&.active {
+		.widget_content {
+			height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-top-width: 0;
+		}
+	}
+	ul {
+		@extend .reset;
+	}
+	a {
+		color: #fff;
+	}
+	&.with-padding {
+		padding: 10px 15px;
+		@include min-break($break-small) {
+			padding: 25px 30px;	
+		}
+	}
+	&.widget_price_filter {
+		.price_slider {
+			height: 4px;
+			background: #454545;
+			position: relative;
+			margin-bottom: 25px;
+			margin-top: 10px;
+			.ui-slider-range {
+				height: 4px;
+				background: $color3;
+				position: absolute;
+			}
+			.ui-slider-handle {
+				display: block;
+				position: absolute;
+				outline: 0;
+				top: -4px;
+				width: 12px;
+				height: 12px;
+				border-radius: 6px;
+				background: $color1;
+				border: 3px solid $color3;
+				@include transition-duration(0s);
+			}
+		}
+		.price_slider_amount {
+			.button {
+				float: right;
+				font-size: 14px;
+				line-height: 14px;
+				font-weight: 600;
+				padding: 1px 0;
+				border: 0;
+				color: $color3;
+				background: transparent;
+				height: auto;
+				text-transform: uppercase;
+				&:hover {
+					background: transparent !important;
+					color: $color3;
+				}
+			}
+			.price_label {
+				float: left;
+				line-height: 14px;
+				font-size: 14px;
+				text-transform: uppercase;
+				
+				span {
+					font-weight: 500;	
+				}
+			}
+		}
+	}
+}

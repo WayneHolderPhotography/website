@@ -1,0 +1,271 @@
+@import "compass/css3";
+@import 'compass/css3/filter';
+@import "compass/css3/user-interface";
+
+$break-small: 48.063em;
+$break-medium: 64.063em;
+$break-large: 80em;
+$break-xlarge: 100em;
+
+$color1: #151515; // black
+$color2: #e03737; // red
+$color3: #fcef1a; // yellow
+
+$transition: cubic-bezier(.77,0,.175,1);
+
+$social: (
+	facebook: #3b5998,
+	google-plus: #dd4b39,
+	linkedin: #007bb6,
+	pinterest: #cb2027,
+	twitter: #00aced,
+	instagram: #3f729b,
+	vk: #45668e,
+	tumblr: #35465c,
+	xing: #cfdc00,
+	soundcloud: #f80,
+	dribbble: #ea4c89,
+	youtube: #e52d27,
+	spotify: #7ab800,
+	behance: #1769ff,
+	deviantart: #4e6252,
+	mail: #5c5f63,
+	vimeo: #162221,
+	flickr: #0063dc,
+	fivehundred: #0099e5
+);
+
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+@mixin min-break($size) {
+	@media only screen and (min-width: $size) { @content; }
+}
+@mixin max-break($size) {
+	@media only screen and (max-width: $size) { @content; }
+}
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General
+2. Re-usable Styles
+3. Body
+4. Typography
+5. Sub-Header & Header
+6. Footer
+7. Post Syling
+8. Sidebar & Widgets
+9. Pagination
+10. Carousel
+15. Form Styling
+17. Contact Page
+18. 404 Page
+19. WP-Specific
+20. Mobile Menu
+22. Comments
+24. Shortcodes
+25. Animations
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+Foundation
+*/
+@import "foundation.scss";
+
+/*------------------------------------------------------------------
+General
+*/
+html {
+	height: 100%;
+}
+body {
+	padding: 0;
+	margin: 0;
+	position: static;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	scroll-behavior: smooth;
+	@extend .bodyfont;
+	
+	@include min-break($break-small) {
+		position: relative;	
+	}
+	div, dl, dt, dd, ul, ol, li, pre, form, p, th, td {
+		font-size: inherit;
+		font-family: inherit;
+	}
+	p {
+		font-style: normal;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.6em;
+		text-rendering: geometricPrecision;
+		-webkit-font-smoothing: antialiased;
+	}
+	strong {
+		font-weight: 600;	
+	}
+}
+figure {
+	margin: 0;	
+}
+
+a {
+	color: $color1;
+	outline: 0;
+	text-decoration: none;
+	@extend .quick-transition;
+	&:focus {
+		color: $color1;
+	}
+	&:hover {
+		color: $color2;	
+	}
+}
+.titlefont {
+	font-family: "Rajdhani", sans-serif;
+}
+.bodyfont {
+	font-family: "Anonymous Pro", serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $color1;
+	margin-top: 0;
+	font-weight: 600;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	@extend .titlefont;
+}
+/*------------------------------------------------------------------
+Re-usable Styles
+*/
+@import "utilities.scss";
+
+/*------------------------------------------------------------------
+Body
+*/
+@import "structure.scss";
+
+/*------------------------------------------------------------------
+Typography
+*/
+@import "typography.scss";
+
+/*------------------------------------------------------------------
+Posts
+*/
+@import "post.scss";
+
+/*------------------------------------------------------------------
+Carousel
+*/
+@import "carousel.scss";
+
+/*------------------------------------------------------------------
+Photo Related Elements
+*/
+@import "album.scss";
+@import "photo.scss";
+@import "atvImg.scss";
+@import "collections.scss";
+
+/*------------------------------------------------------------------
+Header
+*/
+@import "header.scss";
+
+/*------------------------------------------------------------------
+Navigation Menu
+*/
+@import "navigationmenu.scss";
+
+/*------------------------------------------------------------------
+Full Menu
+*/
+@import "fullmenu.scss";
+
+/*------------------------------------------------------------------
+Form Styling
+*/
+@import "forms.scss";
+
+/*------------------------------------------------------------------
+Password Protected Page
+*/
+@import "password.scss";
+
+/*------------------------------------------------------------------
+WP-Specific
+*/
+@import "wpspecific.scss";
+
+/*------------------------------------------------------------------
+Comments
+*/
+@import "comments.scss";
+
+/*------------------------------------------------------------------
+Plugins
+*/
+@import "plugin-pace.scss";
+@import "plugin-swiper.scss";
+@import "plugin-lightgallery.scss";
+@import "plugin-lightgallery-transitions.scss";
+
+/*------------------------------------------------------------------
+Footer
+*/
+@import "footer.scss";
+
+/*------------------------------------------------------------------
+Sidebar
+*/
+@import "sidebar.scss";
+
+/*------------------------------------------------------------------
+Contact
+*/
+@import "contact.scss";
+
+/*------------------------------------------------------------------
+About
+*/
+@import "about.scss";
+
+/*------------------------------------------------------------------
+404
+*/
+@import "404.scss";
+
+/*------------------------------------------------------------------
+Custom Select
+*/
+@import "selectric.scss";
+
+/*------------------------------------------------------------------
+Pagination
+*/
+@import "pagination.scss";
+
+/*------------------------------------------------------------------
+Multi Scroll
+*/
+@import "multiscroll.scss";
+
+/*------------------------------------------------------------------
+WooCommerce
+*/
+@import "woocommerce-shop.scss";
+@import "woocommerce-product.scss";
+@import "woocommerce-cart.scss";
+@import "woocommerce-checkout.scss";
+@import "woocommerce-sidecart.scss";
+@import "woocommerce-myaccount.scss";
+/*------------------------------------------------------------------
+Dark Theme
+*/
+@import "dark.scss";

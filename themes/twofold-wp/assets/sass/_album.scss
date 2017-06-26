@@ -1,0 +1,14 @@
+.album-header {
+	margin-bottom: 30px;
+	
+	@include min-break($break-small) {
+		margin-bottom: 55px;	
+	}
+	h2 {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+	}
+	p {
+		font-size: 14px;	
+	}
+}

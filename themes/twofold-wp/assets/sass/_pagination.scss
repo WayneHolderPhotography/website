@@ -1,0 +1,45 @@
+.pagination {
+	border-top: 2px solid $color1;
+	padding-top: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 50px;
+	@extend .titlefont;
+	.screen-reader-text {
+		display: none;
+	}
+	.page-numbers {
+		display: inline-block;
+		padding: 0 6px;
+		font-size: 14px;
+		font-weight: 600;
+		color: rgba($color1,0.6);
+		
+		&.current,
+		&:hover {
+			color: $color1;
+		}
+		svg {
+			@include scale(0.7);	
+		}
+		&.prev {
+			float: left;
+			display: none;
+			padding: 0;
+			@include min-break($break-large) { 
+				display: inline-block;
+			}
+		}
+		&.next {
+			float: right;
+			display: none;
+			padding: 0;
+			@include min-break($break-large) { 
+				display: inline-block;
+			}
+		}
+	}
+}
+.pagination-space {
+	margin-top: 50px;
+}
