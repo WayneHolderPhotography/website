@@ -197,22 +197,6 @@ function thb_custom_meta_boxes() {
     	  'type'        => 'textblock'
     	),
     	array(
-    	  'label'       => 'Layout',
-    	  'id'          => 'contact_layout',
-    	  'type'        => 'radio',
-    	  'choices'     => array(
-    	  	array(
-    	  	  'label'       => 'Style 1',
-    	  	  'value'       => 'style1'
-    	  	),
-    	    array(
-    	      'label'       => 'Style 2',
-    	      'value'       => 'style2'
-    	    )
-    	  ),
-    	  'std'         => 'style1'
-    	),
-    	array(
     	  'label'       => 'Contact Form 7 Shortcode',
     	  'id'          => 'contact_shortcode',
     	  'type'        => 'text',
@@ -429,31 +413,6 @@ function thb_custom_meta_boxes() {
  	  	  'std'         => 'off',
  	  	  'operator' 		=> 'or',
  	  	  'condition'   => 'gallery_layout:is(style1),gallery_layout:is(style2),gallery_layout:is(style3),gallery_layout:is(style4),gallery_layout:is(style5)'
- 	  	),
- 	  	array(
- 	  	  'label'       => 'Grid Columns',
- 	  	  'id'          => 'columns',
- 	  	  'type'        => 'radio',
- 	  	  'choices'     => array(
- 	  	  	array(
- 	  	  	  'label'       => '5 Columns',
- 	  	  	  'value'       => 'thb-twenty'
- 	  	  	),
- 	  	    array(
- 	  	      'label'       => '4 Columns',
- 	  	      'value'       => 'large-3'
- 	  	    ),
- 	  	    array(
- 	  	      'label'       => '3 Columns',
- 	  	      'value'       => 'large-4'
- 	  	    ),
- 	  	    array(
- 	  	      'label'       => '2 Columns',
- 	  	      'value'       => 'large-6'
- 	  	    )
- 	  	  ),
- 	  	  'std'         => 'thb-twenty',
- 	  	  'condition'   => 'gallery_layout:is(style4)'
  	  	),
  	  	array(
  	  	  'label'       => 'Gallery Layout Style',

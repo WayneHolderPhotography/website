@@ -23,7 +23,7 @@
 				<?php if ($album_share === 'on') { do_action('thb_share'); } ?>
 			</div>
 		</div>
-		<div class="masonry isotope-grid row expanded gallery-style6 <?php if ($photo_proof == 'on') { echo 'photo-proof-enabled'; } ?>">
+		<div class="masonry isotope-grid row expanded <?php if ($photo_proof == 'on') { echo 'photo-proof-enabled'; } ?>">
 		<?php
 			if ($album_photos_array) {
 				$i = 0;
@@ -38,7 +38,7 @@
 					$proof_class = $photo_proof == 'on' ? thb_proof_class($photo) : '';
 					?>
 					<div class="item columns">
-						<figure class="no-padding" style="width: <?php echo esc_attr($image_width); ?>px; padding-bottom: <?php echo esc_attr($padding); ?>%;">
+						<figure style="width: <?php echo esc_attr($image_width); ?>px; padding-bottom: <?php echo esc_attr($padding); ?>%;">
 							<?php do_action('thb_render_photo', $photo_proof, $proof_class, $photo, $image_url, $full_url, $rand); ?>
 							<div id="photo-caption-<?php echo esc_attr($rand); ?>" style="display: none;">
 							  <div class="row image-information no-padding expanded">
@@ -67,3 +67,4 @@
 		</div>
 	</div>
 </div>
+<?php get_footer(); ?>

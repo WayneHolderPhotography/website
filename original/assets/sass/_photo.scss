@@ -1,9 +1,7 @@
 .item {
 	position: relative;
+	width: auto;
 
-	.gallery-style6 & {
-		width: auto;
-	}
 	&>figure {
 		position: relative;	
 		

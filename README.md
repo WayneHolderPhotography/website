@@ -1,4 +1,4 @@
-# wayneholdenphotograpy
+# Wayne Holden Photography
 
 `docker-compose up`
 

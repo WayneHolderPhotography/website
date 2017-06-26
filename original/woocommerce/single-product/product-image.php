@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.0
+ * @version 2.7.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,7 +31,7 @@ $shop_product_lightbox = ot_get_option('shop_product_lightbox', 'lightbox');
 if( $product->has_child() && $product->is_type( 'variable' )) { 
 	$available_variations = $product->get_available_variations();
 }
-$attachment_ids = $product->get_gallery_image_ids();
+$attachment_ids = $product->get_gallery_attachment_ids();
 $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
 ?>
 <div class="woocommerce-product-gallery <?php //echo 'woocommerce-product-gallery--columns-' . sanitize_html_class( $columns ) . ' columns-' . sanitize_html_class( $columns ); ?> images">
@@ -46,7 +46,7 @@ $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : fal
 					$attr = '';
 					if (isset($available_variations)) {
 						foreach($available_variations as $prod_variation) {
-						  if ($src_small[0] == $prod_variation['image']['src']) {
+						  if ($src_small[0] == $prod_variation['image_src']) {
 						  	$attr .= implode(',', $prod_variation['attributes']) . ',';
 						  }
 						}

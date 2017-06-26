@@ -29,12 +29,12 @@ function thb_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 80, 75, true );
 	add_image_size('twofold-1', 800, 600, true );
+	add_image_size('twofold-true', 800, 600, true );
 	add_image_size('twofold-2', 9999, 380, false );
 	add_image_size('twofold-blog-style1', 800, 9999, false );
 	add_image_size('twofold-blog-style2', 1050, 640, true );
 	add_image_size('twofold-blog-style3', 600, 400, true );
 	add_image_size('twofold-collection-style1', 320, 180, true );
-	add_image_size('twofold-collection-style1-ta', 9999, 180, false );
 	
 	if (false === get_option("medium_crop")) {
 	    add_option("medium_crop", "1");
@@ -60,8 +60,6 @@ function thb_body_classes( $classes ) {
 	$menu_position = ot_get_option('menu_position', 'thb-menu-left');
 	$menu_type = ot_get_option('menu_type', 'thb-mobile-icon') . '-enabled';
 	$logo_position = ot_get_option('logo_position', 'thb-logo-left');
-	$contact_layout = 'contact_layout_'. (get_post_meta($id, 'contact_layout', true) ? get_post_meta($id, 'contact_layout', true) : 'style1');
-	$classes[] = $contact_layout;
 	$classes[] = $lightbox_downloads;
 	$classes[] = $lightbox_zoom;
 	$classes[] = $lightbox_autoplay;
@@ -235,7 +233,7 @@ function thb_swiper_nav() {
 add_action( 'thb_swiper_nav', 'thb_swiper_nav', 3, 3 );
 
 /* Column Sizes */
-function thb_get_column_size($style = 'style1', $i = 0, $columns = false) {
+function thb_get_column_size($style = 'style1', $i = 0) {
 	$prefix = 'twofold-';
 	if ($style == 'style1') {
 		switch ($i) {
@@ -332,24 +330,7 @@ function thb_get_column_size($style = 'style1', $i = 0, $columns = false) {
 				break;
 		}
 	} else if ($style == 'style4') {
-		if (!$columns) {
-			$image_size = 'thb-twenty height-1-5';
-		} else {
-			switch ($columns) {
-				case 'large-3':
-					$image_size = 'large-3 height-2';
-					break;
-				case 'large-4':
-					$image_size = 'large-4 height-2';
-					break;
-				case 'large-6':
-					$image_size = 'large-6 height-2';
-					break;
-				default:
-					$image_size = 'thb-twenty height-1-5';
-					break;
-			}
-		}	
+		$image_size = 'thb-twenty height-1-5';
 	}
 	return $image_size;
 }

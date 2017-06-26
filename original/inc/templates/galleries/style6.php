@@ -6,7 +6,7 @@
 ?>
 	<?php if ($page_padding == 'on') { ?><div class="page-padding"><?php } ?>
 	<div class="side_padding">
-		<div class="masonry isotope-grid row expanded gallery-style6 <?php if ($photo_proof == 'on') { echo 'photo-proof-enabled'; } ?>">
+		<div class="masonry isotope-grid row expanded <?php if ($photo_proof == 'on') { echo 'photo-proof-enabled'; } ?>">
 		<?php
 			if ($album_photos_array) {
 				$i = 0;

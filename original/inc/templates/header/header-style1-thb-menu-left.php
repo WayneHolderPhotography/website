@@ -4,14 +4,19 @@
 	$logo_position = ot_get_option('logo_position', 'thb-logo-left');
 	$menu_type = ot_get_option('menu_type', 'thb-mobile-icon');
 ?>
-<header id="header">
+<div class="head-back fixed">
+<div class="page">
+<header id="header" style="width:auto !Important;">
 	<div class="logo-holder">
 		<div class="mobile-toggle">
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="menu-icon" x="0" y="0" width="19.2" height="12" viewBox="0 0 19.2 12" enable-background="new 0 0 19.188 12.031" xml:space="preserve"><path class="thb-top-line" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.1 1h12c2.8 0 5.1 2.2 5.1 5 0 2.8-2.3 5-5.1 5l-12-10"/><path class="thb-mid-line" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.1 6h12"/><path class="thb-bottom-line" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.1 11h12c2.8 0 5.1-2.2 5.1-5 0-2.8-2.3-5-5.1-5l-12 10"/></svg>
 		</div>
 		<a href="<?php echo esc_url(home_url()); ?>" class="logo">
+			<div class="logoimg logo_light"><?php echo get_option('mytheme_logoname'); ?></div>
+		<?php/*
 			<img src="<?php echo esc_attr($logo_light); ?>" class="logoimg logo_light" alt="<?php esc_attr(bloginfo('name')); ?>"/>
 			<img src="<?php echo esc_attr($logo_dark); ?>" class="logoimg logo_dark" alt="<?php esc_attr(bloginfo('name')); ?>"/>
+		*/?>
 		</a>
 	</div>
 	<div class="right-holder">
@@ -27,3 +32,5 @@
 		<?php if (is_singular('collection')) { do_action('thb_collection_nav'); }?>
 	</div>
 </header>
+</div>
+	</div>

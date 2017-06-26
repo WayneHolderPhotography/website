@@ -13,6 +13,8 @@
 	$meta = preg_replace('/<a href=\"(.*?)\">(.*?)<\/a>/', "\\2", $meta);
 ?>
 <div class="page-padding">
+	<div class="page">
+	<div class="" style="margin: 0 auto !important; float: none !important;  width: auto;">
 	<div class="side_padding">
 		<div class="row align-center expanded">
 			<div class="small-12 medium-10 large-6 columns text-center album-header post">
@@ -79,4 +81,6 @@
 		?>
 		</div>
 	</div>
+</div>
+</div>
 </div>

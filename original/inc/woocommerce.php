@@ -119,7 +119,7 @@ function thb_woocomerce_side_cart_update($fragments) {
 	}
 
 }
-add_filter('woocommerce_add_to_cart_fragments', 'thb_woocomerce_side_cart_update');
+add_filter('add_to_cart_fragments', 'thb_woocomerce_side_cart_update');
 add_action('thb_side_cart', 'thb_woocomerce_side_cart_update');
 
 /* Add To Cart */
@@ -132,7 +132,7 @@ function thb_add_to_cart_link( $link, $product ){
     $link = sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>',
     		esc_url( $product->add_to_cart_url() ),
     		esc_attr( isset( $quantity ) ? $quantity : 1 ),
-    		esc_attr( $product->get_id() ),
+    		esc_attr( $product->id ),
     		esc_attr( $product->get_sku() ),
     		esc_attr( isset( $class ) ? $class : 'add_to_cart_button ajax_add_to_cart' ),
     		$product->add_to_cart_text()
@@ -148,7 +148,7 @@ function thb_woocomerce_ajax_cart_update($fragments) {
 	$fragments['.float_count'] = ob_get_clean();
 	return $fragments;
 }
-add_filter('woocommerce_add_to_cart_fragments', 'thb_woocomerce_ajax_cart_update');
+add_filter('add_to_cart_fragments', 'thb_woocomerce_ajax_cart_update');
 
 /* Shop Header */
 // Remove orderby & breadcrumb
@@ -204,7 +204,7 @@ function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $deprecated1
   $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
 	
 	$featured = wp_get_attachment_url( get_post_thumbnail_id(), 'shop_catalog' );
-	$attachment_ids = $product->get_gallery_image_ids();
+	$attachment_ids = $product->get_gallery_attachment_ids();
 	if ( $attachment_ids ) {
 		$loop = 0;
 		foreach ( $attachment_ids as $attachment_id ) {

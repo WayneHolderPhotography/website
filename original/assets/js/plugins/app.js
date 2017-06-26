@@ -75,8 +75,7 @@
 						if (_this.attr('id').indexOf('album-scroll') > -1) {
 							var children = _this.find('.album_list'),
 									w = 0;
-							
-							params.eventPassthrough = true;
+									
 							$.each(children, function() {
 								w += $(this).outerWidth(true) + 4;
 							});
@@ -147,7 +146,7 @@
 					zoom = $('body').hasClass('lightbox-zoom-enabled') ? true : false,
 					autoplay = $('body').hasClass('lightbox-autoplay-enabled') ? true : false,
 					effect = $('body').data('lightbox-effect');
-
+				console.log(themeajax.settings.lightbox_autoplay_duration);
 				container.each(function() {
 					$(this).lightGallery({
 						selector: '[rel="lightbox"]',
@@ -158,7 +157,6 @@
 						pause: themeajax.settings.lightbox_autoplay_duration * 1000,
 						zoom: zoom,
 						download: download,
-						hash: false,
 						cssEasing: 'cubic-bezier(.77,0,.175,1)',
 						easing: thb_ease,
 						hideBarsDelay: 99999
@@ -972,7 +970,7 @@
 						tween_data = 0;
 
 				if (win.width() > 1024) {
-					$('#contact_area.style1').on('mousewheel', function(event) {
+					$('#contact_area').on('mousewheel', function(event) {
 							var direction = event.deltaY;
 	
 						if(!tween.isActive()){

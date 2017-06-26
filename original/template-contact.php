@@ -4,11 +4,27 @@ Template Name: Contact
 */
 ?>
 <?php get_header(); ?>
-<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 <?php 
-	$id = get_the_ID();
-	$contact_layout = get_post_meta($id, 'contact_layout', true) ? get_post_meta($id, 'contact_layout', true) : 'style1';
-	get_template_part( 'inc/templates/contact/'.$contact_layout );
+	$locations = ot_get_option('map_locations'); 
+	$contact_shortcode = get_post_meta(get_the_ID(), 'contact_shortcode', true);
 ?>
+<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+<div id="contact_area" class="contact-container">
+	<div class="contact-content">
+		<div class="page-padding">
+			<div class="row align-center">
+				<div class="small-12 medium-5 large-4 columns">
+					<?php the_content(); ?>
+				</div>
+				<div class="small-12 medium-5 large-4 columns">
+					<?php echo do_shortcode($contact_shortcode); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php if (ot_get_option('contact_map', 'on') == 'on') { ?>
+	<div  class="contact_map google_map" data-map-zoom="<?php echo ot_get_option('contact_zoom', 17); ?>" data-map-center-lat="<?php echo ot_get_option('map_center_lat', '59.93815'); ?>" data-map-center-long="<?php echo ot_get_option('map_center_long', '10.76537'); ?>" data-latlong='<?php echo esc_attr(json_encode($locations)); ?>' data-pin-image="<?php echo ot_get_option('map_pin_image', THB_THEME_ROOT. '/assets/img/pin.png'); ?>"></div>
+	<?php } ?>
+</div>
 <?php endwhile; else : endif; ?>
 <?php get_footer(); ?>

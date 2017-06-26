@@ -653,14 +653,7 @@ function thb_custom_theme_options() {
         'section'     => 'customization'
       ),
       array(
-        'label'       => 'Full Menu Font Adjustment',
-        'id'          => 'full_menu_font',
-        'type'        => 'typography',
-        'desc'        => 'Font Settings for menu.',
-        'section'     => 'customization'
-      ),
-      array(
-        'label'       => 'Mobile Menu Font Adjustment',
+        'label'       => 'Menu Font Adjustment',
         'id'          => 'menu_font',
         'type'        => 'typography',
         'desc'        => 'Font Settings for menu.',
@@ -713,38 +706,6 @@ function thb_custom_theme_options() {
         'type'        => 'background',
         'desc'        => 'Background settings for the Preloader. You can change the center image inside Theme Options > Misc.',
         'section'     => 'customization'
-      ),
-      array(
-        'id'          => 'footer_tab1',
-        'label'       => 'General',
-        'type'        => 'tab',
-        'section'     => 'footer'
-      ),
-      array(
-        'label'       => 'Footer Left content',
-        'id'          => 'footer_left_content',
-        'type'        => 'radio',
-        'desc'        => 'You can change the left content of the footer here.',
-        'choices'     => array(
-          array(
-            'label'       => 'Menu',
-            'value'       => 'menu'
-          ),
-          array(
-            'label'       => 'Text',
-            'value'       => 'text'
-          )
-        ),
-        'std'         => 'menu',
-        'section'     => 'footer'
-      ),
-      array(
-        'label'       => 'Text Content',
-        'id'          => 'footer_left_text',
-        'type'        => 'textarea',
-        'desc'        => 'Text Content of the footer',
-        'section'     => 'footer',
-        'condition'   => 'footer_left_content:is(text)'
       ),
 	  	array(
 	  	  'id'          => 'footer_tab2',

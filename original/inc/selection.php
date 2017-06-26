@@ -15,9 +15,6 @@ body {
 .navigation-menu li a {
 	<?php thb_typeecho(ot_get_option('menu_font')); ?>
 }
-.thb-full-menu li a {
-	<?php thb_typeecho(ot_get_option('full_menu_font')); ?>
-}
 .footer-menu li a,
 .left-side .footer-menu li+li:before {
 	<?php thb_typeecho(ot_get_option('footer_font')); ?>

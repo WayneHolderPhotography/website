@@ -5,6 +5,8 @@
 		<?php } else { ?>
 			<ul class="navigation-menu">
 				<li><a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php esc_html_e( 'Please assign a menu', 'twofold' ); ?></a></li>
+				
+				
 			</ul>
 		<?php } ?>
 	</div>

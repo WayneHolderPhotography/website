@@ -1,31 +1,49 @@
 </div> <!-- End #wrapper -->
-
 <!-- Start Footer -->
-<footer id="footer" role="contentinfo">
-	<div class="row">
-		<div class="small-12 medium-6 columns left-side">
-			<?php if ('menu' === ot_get_option('footer_left_content','menu')) { ?>
-				<?php if (has_nav_menu('footer-menu')) { ?>
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'depth' => 1, 'container' => false, 'menu_class' => 'footer-menu' ) ); ?>
-				<?php } ?>
-			<?php } else { ?>
-				<?php echo wp_kses_post(ot_get_option('footer_left_text')); ?>
-			<?php } ?>
-		</div>
-		<div class="small-12 medium-6 columns right-side">
-			<?php do_action('thb_social_footer'); ?>
-		</div>
-	</div>
+<div class="footer">
+            <div class="page">
+            <div class="">
+            <div id="text-3" class="small-12 large-3 footer-section">		
+			<div class="textwidget"> 
+			<ul class="creted">
+			<?php dynamic_sidebar( 'footer-logo-section' ); ?>     
+         </ul>
+		 </div>
+		</div> <!-- end .fwidget -->
 
-</footer>
+			<div id="text-3" class="small-12 large-3 footer-section">		
+			<div class="textwidget"> 
+			<ul class="creted">
+			<?php dynamic_sidebar( 'footer-userfull-links' ); ?>   
+         </ul>
+		 </div>
+		</div> <!-- end .fwidget -->
+		
+			<div id="text-3" class="small-12 large-3 footer-section">		
+			<div class="textwidget"> 
+			<ul class="creted">
+			<?php dynamic_sidebar( 'footer-blog' ); ?>   
+         </ul>
+		 </div>
+		</div> <!-- end .fwidget -->
+		
+		
+			<div id="text-3" class="small-12 large-3 footer-section">		
+			<div class="textwidget"> 
+			<ul class="creted">
+			<?php dynamic_sidebar( 'footer-map-section' ); ?>   
+         </ul>
+		 </div>
+		</div> 
+		<!-- end .fwidget <div class="footer2" style="width:100%;"> <?php echo get_option('mytheme_develop');?></div>-->
+		
+         </div>
+        
+        </div>
+        </div>
+
 <!-- End Footer -->
 
-<?php 
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-	 wp_footer(); 
-?>
+<?php wp_footer(); ?>
 </body>
 </html>

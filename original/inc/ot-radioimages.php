@@ -99,7 +99,7 @@ function thb_filter_typography_fields( $array, $field_id ) {
 	  $array = array( 'font-family');
 	}
 	
-	if ( $field_id == "album_font" || $field_id == "full_menu_font" || $field_id == "menu_font" || $field_id == "footer_font" || $field_id == "caption_font") {
+	if ( $field_id == "album_font" || $field_id == "menu_font" || $field_id == "footer_font" || $field_id == "caption_font") {
 	   $array = array( 'font-size', 'text-transform', 'font-weight', 'letter-spacing');
 	}
 	

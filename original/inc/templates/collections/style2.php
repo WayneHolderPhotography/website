@@ -40,7 +40,7 @@
 													$aspect_ratio = '';
 													if ($true_aspect_ratio === 'on') {
 														$aspect_ratio = $photo ? (($full_url[2] / $full_url[1]) * 100).'%' : '100%';
-														$image_url = wp_get_attachment_image_src($photo, 'twofold-collection-style1-ta');
+														$image_url = wp_get_attachment_image_src($photo, 'twofold-2');
 													}
 												?>
 												<li>

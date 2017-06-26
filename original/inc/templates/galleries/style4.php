@@ -4,7 +4,6 @@
 	$true_aspect_ratio = get_post_meta($id, 'true_aspect_ratio', true);
 	$photo_proof = get_post_meta($id, 'photo_proof', true);
 	$album_photos_array = explode(',', get_post_meta($id, 'gallery_photos', true));
-	$columns = get_post_meta($id, 'columns', true) ? get_post_meta($id, 'columns', true) : 'thb-twenty';
 ?>
 	<?php if ($page_padding == 'on') { ?><div class="page-padding"><?php } ?>
 	<div class="side_padding">
@@ -19,7 +18,7 @@
 					$photo_post = get_post($photo);
 					$exif = thb_get_exif_data($full_url[0]);
 					
-					$column_size = thb_get_column_size('style4', $i, $columns);
+					$column_size = thb_get_column_size('style4', $i);
 					
 					$proof_class = $photo_proof == 'on' ? thb_proof_class($photo) : '';
 					
