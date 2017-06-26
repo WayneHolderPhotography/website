@@ -17,4 +17,5 @@ jQuery(document).ready(function(){
 	 $(".old_cal div:nth-child(4)").css("top", "558px");
 });
 </script>
+
 <?php get_footer(); ?>

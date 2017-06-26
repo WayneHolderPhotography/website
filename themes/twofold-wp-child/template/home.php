@@ -25,7 +25,7 @@ get_header();
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]>', $content);
           ?>
-          <h2 class="section-title" style="color:#252525 !important; padding: 13px 0 !important; line-height: 30px !important;"><?php echo $title;?></h2>
+          <h2 class="section-title" style="color:#252525!important; padding: 13px 0!important; line-height: 30px!important;"><?php echo $title;?></h2>
           <div class="home-photographer-content-section"><?php echo $content;?></div>
         </div>
       </div>

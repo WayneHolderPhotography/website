@@ -5,6 +5,13 @@ function enqueue_parent_styles() {
    wp_enqueue_style('parent-style', get_template_directory_uri().'/style.css' );
 }
 
+add_action( 'wp_enqueue_scripts', 'enqueue_styes' );
+function enqueue_styes() {
+   wp_enqueue_style('normalize', get_stylesheet_directory_uri() . '/css/normalize.css' );
+   wp_enqueue_style('helpers', get_stylesheet_directory_uri() . '/css/helpers.css' );
+   wp_enqueue_style('child_theme', get_stylesheet_uri());
+}
+
 /**
  * Register widget area.
  *
