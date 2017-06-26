@@ -1,0 +1,57 @@
+.collection_album {
+	width: 100%;
+	
+	h6 {
+		text-transform: uppercase;	
+		font-weight: 700;
+	}
+	.custom_scroll {
+		min-height: 190px;
+		margin-bottom: 40px;
+		overflow: visible;
+	}
+	ul {
+		position: static;
+		min-height: 180px;
+		width: 3000px;
+		li {
+			float: left;
+			margin-right: 4px;
+		}	
+	}
+	&.album-style3 {
+		.custom_scroll {
+			margin: 0;
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+.album_list {
+	float: left;
+	width: 320px;
+	height: 180px;
+	position: relative;
+	.photo {
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	&.thb-true-aspect-collection {
+		height: 180px;
+		background-size: contain;
+	}
+}
+.collection_filter {
+	display: inline-flex;
+	visibility: hidden;
+	text-align: right;
+	margin-left: auto;
+	@include min-break($break-small) {
+		display: inline-flex;
+		visibility: visible;
+	}
+	.thb-menu-right.menu-open & {
+		visibility: hidden;
+	}
+}

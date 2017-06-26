@@ -1,0 +1,139 @@
+.medium-title {
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.cross-sells h2,
+.related.products h2,
+.woocommerce-order-received h2,
+.addresses h3 {
+	@extend .medium-title;
+}
+.woocommerce-info {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	a {
+		color: $color2;	
+		
+		&:hover {
+			color: $color2;	
+		}
+	}
+	
+	& + form {
+		margin-top: -10px;
+		margin-bottom: 30px;
+		p {
+			color: #67676;
+			font-size: 12px;
+		}	
+	}
+}
+.lost_password {
+	display: flex;
+	justify-content: space-between;
+}
+.woocommerce-password-strength {
+	color: $color2;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.woocommerce-password-hint {
+	color: #676767;
+	font-size: 12px;
+	line-height: 1;
+}
+.checkout_coupon {
+	display: flex;
+	
+	.form-row-first {
+		flex: 1;	
+		padding-right: 10px;
+	}
+	input {
+		margin: 0;	
+	}
+}
+.woocommerce-billing-fields {
+	margin-bottom: 30px;
+}
+.woocommerce-billing-fields h3,
+.woocommerce-shipping-fields h3 {
+	@extend .medium-title;
+}
+#order_review_heading {
+	@extend .widget-title;
+	margin-bottom: 0;
+	padding: 10px 15px 0;
+	@include min-break($break-small) {
+		padding: 25px 30px 0;	
+	}
+	
+}
+.woocommerce-checkout-payment {
+	.wc_payment_methods {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid rgba(#fff, 0.1);
+	}
+	
+	label {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;	
+		margin-left: 10px;
+		
+		img {
+			display: none;	
+		}
+		a {
+			display: inline-block;
+			margin-left: 5px;
+			color: $color3;
+			font-size: 12px;	
+		}
+	}
+	.button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 50px;
+		line-height: 1;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+	.payment_box {
+		padding-left: 30px;
+		font-size: 13px;
+		
+		p {
+			font-size: 13px;	
+		}
+	}
+}
+.place-order {
+	label {
+		font-size: 12px;
+		max-width: calc(100% - 40px);	
+	}
+}
+#customer_details {
+	.form-row {
+		margin: 0;
+	}
+	#shipping_address_1 {
+		margin-bottom: 5px;
+	}
+}
+.woocommerce-error {
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 30px;
+	li {
+		margin-bottom: 5px;	
+	}
+}

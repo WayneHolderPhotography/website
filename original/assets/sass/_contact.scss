@@ -1,0 +1,32 @@
+.contact-container {
+	min-height: 100vh;
+	
+	&.style1 {
+		@include min-break($break-small) {
+			height: 80vh;
+			overflow: hidden;
+		}
+	}
+}
+.contact-content {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	
+	.page-padding {
+		min-height: 0;
+	}
+}
+.contact-style2-content {
+	padding: 0 15px;
+	@media only screen and (min-width: $break-small) {
+		padding: 0 20px;
+	}
+	@media only screen and (min-width: $break-medium) {
+		padding: 0 30px;
+	}
+}
+.google_map {
+	width: 100%;
+	height: 100vh;
+}

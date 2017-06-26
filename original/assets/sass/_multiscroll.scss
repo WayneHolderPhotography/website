@@ -1,0 +1,245 @@
+.multiscroll {
+	height: 100vh;
+	overflow: hidden;
+}
+.ms-section {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .ms-section-inner {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100vw;
+    	height: 100%;
+    	background-size: cover;
+    	background-position: center;
+    	@include transition(transform 1s $transition);
+    	.ms-left & {
+    		.split & {
+    			
+    		}
+    	}
+    	.ms-right & {
+    		left: auto;
+    		right: 0;
+    		
+    		.split & {
+    				
+    		}
+    	}
+    }
+   .split & {
+   		overflow: visible;
+   		height: 50vh;
+   		@include min-break($break-small) {
+   			height: 100vh;
+   		}
+	   	.ms-section-inner {
+	   		opacity: 0.5;
+	   		@include transition(opacity 1s $transition);
+	   	}
+	   	&.active {
+	   		.ms-section-inner {
+	 				opacity: 1;	
+	 			}
+	   	}
+   }
+}
+.ms-right,
+.ms-left {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+
+}
+.ms-left {
+	width: 100%;
+	
+	@include min-break($break-small) {
+		width: 50%;
+	}
+	.split & {
+		height: 50%;	
+		width: 100%;
+
+		@include min-break($break-small) {
+			height: 100%;
+		}
+		.ms-section-inner {
+			opacity: 0.5;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: auto;
+			height: auto;
+			
+			@include min-break($break-small) {
+				left: 30px;
+				right: 15px;
+				bottom: 30px;
+				@include translateY(15%);	
+			}
+		}
+	}
+}
+.ms-left-container,
+.ms-right-container {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	overflow: hidden;
+	opacity: 0.999;
+	float: left;
+	@include translate3d(0,0,0);
+	@include min-break($break-small) {
+		width: 50%;
+		height: 100vh;
+		opacity: 1;
+	}
+}
+.ms-right {
+	left: auto;
+	right: 0;
+	display: none;
+	
+	@include min-break($break-small) {
+		display: block;	
+	}
+
+	.split & {
+		display: block;
+		width: 100%;
+		height: 50%;
+		top: 0;
+		left: auto;
+		@include min-break($break-small) {
+			height: 100%;
+		}
+		.ms-section-inner {
+			opacity: 0.5;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: auto;
+			height: auto;
+			
+			@include min-break($break-small) {
+				left: 15px;
+				right: 30px;
+				top: 30px;
+				@include translateY(-15%);	
+			}
+		}
+	}
+}
+.ms-easing {
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+#multiscroll-nav {
+	position: absolute;
+	text-align: center;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	top: 50%;
+	@include translate3d(0,-50%,0);
+	z-index: 10;
+	
+	right: 15px;
+	z-index: 11;
+	text-align: right;
+	max-width: 50px;
+	display: none;
+	@media only screen and (min-width: $break-small) {
+		display: block;
+		right: 25px;
+	}
+	@media only screen and (min-width: $break-medium) {
+		right: 35px;
+	}
+	a {
+		display: inline-block;
+		width: 50px;
+		height: 15px;
+		background: none;
+		position: relative;
+		opacity: 1;
+		cursor: pointer;
+		margin: 2px 0;
+		@media only screen and (min-width: $break-small) {
+			height: 21px;
+		}
+		@media only screen and (min-width: $break-medium) {
+			height: 26px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 7px;
+			right: 0;
+			display: block;
+			height: 1px;
+			width: 30px;
+			background: $color1;
+			@extend .transition;
+			
+			@media only screen and (min-width: $break-small) {
+				top: 10px;
+			}
+			@media only screen and (min-width: $break-medium) {
+				top: 12px;
+			}
+		}
+		em {
+			position: absolute;
+			right: 100%;
+			padding-right: 14px;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			top: 50%;
+			white-space: nowrap;
+			font-style: normal;
+			@include translateY(-50%);
+			opacity: 0;
+			@extend .quick-transition;
+			@extend .titlefont;
+			@media only screen and (min-width: $break-small) {
+				display: block;
+			}
+		}
+		
+		&:hover {
+			color: $color1;
+			em {
+				opacity: 1;	
+			}
+			&:not(.swiper-pagination-bullet-active) {
+				&:after {
+					width: 40px;	
+				}
+			}
+		}
+		&.active {
+			background: none;
+			width: 50px;
+			
+			&:after {
+				
+				width: 50px;
+			}
+		}
+	}
+}

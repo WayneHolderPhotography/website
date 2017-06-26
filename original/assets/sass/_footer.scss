@@ -1,0 +1,73 @@
+#footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 0 15px 15px;
+	z-index: 50;
+	line-height: 1;
+	
+	.open-cart & {
+		display: none;
+	}
+	.thb_video_background & {
+		display: none;
+	}
+	@media only screen and (min-width: $break-small) {
+		padding: 0 25px 25px;
+	}
+	@media only screen and (min-width: $break-medium) {
+		padding: 0 35px 35px;
+	}
+	.row {
+		max-width: 100%;
+		margin: 0;
+		.columns {
+			padding: 0;
+		}
+	}
+	.left-side {
+		font-size: 11px;
+		display: none;
+		
+		@include min-break($break-small) {
+			display: block;	
+		}
+		.footer-menu {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+			li {
+				display: inline-block;
+				margin: 0;
+				
+				& + li {
+					padding-left: 18px;
+					position: relative;
+					&:before {
+						content: '/';
+						position: absolute;
+						left: 4px;
+						top: 0;	
+						@extend .quick-transition;
+					}
+				}	
+			}
+		}
+	}
+	.right-side {
+		text-align: center;
+		font-size: 11px;
+		width: 100%;
+		@include min-break($break-small) {
+			text-align: right;
+		}
+		@media screen and (min-width: 641px), screen and (max-width: $break-small) {
+		  flex: 1;
+		  max-width: 100%; 
+		}
+		a {
+			display: inline-block;
+			padding: 0 4px;	
+		}
+	}
+}

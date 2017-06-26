@@ -1,0 +1,239 @@
+.cart_placeholder {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 100%;
+	z-index: 35;
+	background: transparent;
+	
+	.open-cart & {
+		width: 100%;
+	}
+}
+.quick_cart {
+	position: absolute;
+	top: 200px;
+	right: 100%;
+	line-height: 1;
+	display: inline-flex;
+	margin: 0;
+	width: 44px;
+	height: 44px;
+	justify-content: center;
+	align-items: center;
+	background: $color3;
+	border-radius: 3px 0 0 3px;
+	div {
+		position: relative;	
+	}
+	svg {
+		width: 24px;	
+		fill: $color1;
+	}
+	.float_count {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 10px;
+		font-weight: 600;
+		background: $color1;
+		color: #fff;
+		position: absolute;
+		top: -3px;
+		right: -9px;
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		border: 2px solid $color3;
+	}
+}
+/* Side Cart */
+#side-cart {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 39;
+	padding: 0;
+	width: 380px;
+	max-width: calc(100% - 60px);
+	background: $color1;
+	right: 0;
+	color: #fff;
+	@include translate3d(100%, 0, 0);
+	@extend .quick-transition;
+	@extend .admin-style;
+	.open-cart & {
+		@include translate3d(0,0,0);
+	}
+	.table {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+	.cart-container {
+		background: $color1;
+		height: 100%;
+		float: right;
+		width: 100%;
+		position: relative;
+		color: #fff;
+		padding: 30px 30px 135px 30px;
+		@include min-break($break-small) {
+			padding-bottom: 165px;
+		}
+		&.empty {
+			padding-bottom: 0;
+		}
+	}
+	header {
+		border-bottom: 1px solid rgba(#fff,0.1);
+		
+		h6 {
+			@extend .widget-title;
+		}
+	}
+	
+	.buttons {
+		width: 100%;
+		padding: 15px;
+		height: 135px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		
+		@include min-break($break-small) {
+			padding: 30px;
+			height: 165px;
+		}
+		.btn {
+			margin: 0;
+			text-align: center;
+		}
+		.btn + .btn {
+			margin-top: 5px;
+		}
+	}
+	.subtotal {
+		width: 100%;
+		padding: 35px 0;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-align: center;
+		span:not(.woocommerce-Price-currencySymbol) {
+			display: block;
+			color: #1fed71;
+			font-size: 34px;
+			font-weight: 600;
+		}
+	}
+	.custom_scroll {
+		top: 75px;
+		bottom: 145px;
+		position: absolute;
+		height: auto;
+		left: 30px;
+		right: 30px;
+		@include min-break($break-small) {
+			bottom: 175px;
+		}
+		.iScrollIndicator {
+			background: rgba(255,255,255,0.2) !important;
+		}
+	}
+	ul {
+		display: block;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		margin: 0;
+		li {
+			position: relative;
+			border-bottom: 1px solid rgba(#fff,0.1);
+			padding: 20px 0;
+			margin: 0;
+			figure {
+				float: left;
+				max-width: 50px;
+				margin-right: 20px;
+				img {
+					width: 50px;	
+				}
+			}
+			.list_content {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: center;
+				color: #fff;
+				min-height: 50px;
+				.quantity,
+				.price {
+					color: #fff;
+				}
+				h5 {
+					display: block;
+					font-size: 16px;
+					font-weight: 700;
+					margin: 0 0 5px;
+					
+					a {
+						color: #fff;
+						
+						&:hover {
+							color: $color3;
+						}	
+					}
+					& + div {
+						width: 100%;	
+						font-size: 14px;
+						line-height: 1;
+						font-weight: 500;
+						display: flex;
+						align-items: center;
+					}
+				}
+				.cross {
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0 3px;
+				}
+				.quantity {
+					padding: 0;
+				}
+				.price {
+					display: inline-flex;
+					line-height: 1;
+					& > .amount {
+						font-size: 14px;
+					}
+				}
+				dl.variation {
+					margin-top: 5px;
+					width: 100%;
+				}
+			}
+			.remove {
+				position: absolute;
+				top: 15px;
+				right: 0;
+				@include min-break($break-small) {
+					top: 20px;
+					right: 0;
+				}
+				line-height: 5px;
+				font-size: 24px;
+				width: 12px;
+				text-align: right;
+				color: rgba(#fff,0.6);
+				
+				&:hover {
+					color: rgba(#fff,1);	
+				}
+			}
+		}
+	}
+}
