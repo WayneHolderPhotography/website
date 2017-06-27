@@ -10,9 +10,11 @@ function enqueue_styes() {
    wp_enqueue_style('normalize', get_stylesheet_directory_uri() . '/css/normalize.css' );
    wp_enqueue_style('helpers', get_stylesheet_directory_uri() . '/css/helpers.css' );
    wp_enqueue_style('child_theme', get_stylesheet_uri());
+   wp_enqueue_style('custom_style',get_stylesheet_directory_uri().'/css/main.css');
+   wp_enqueue_style('custom_owl.compiled',get_stylesheet_directory_uri().'/css/style.css');
 }
 
-/**
+	/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -27,7 +29,6 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
 	register_sidebar( array(
 		'name'          => __( 'Footer logo Section', 'twentyseventeen' ),
 		'id'            => 'footer-logo-section',
@@ -82,26 +83,28 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
-
 add_action( 'init', 'my_add_excerpts_to_pages' );
+	function my_add_excerpts_to_pages() {
+	     add_post_type_support( 'page', 'excerpt' );
+	}
 
-function my_add_excerpts_to_pages() {
-    add_post_type_support( 'page', 'excerpt' );
-}
 
-function themeoptions_admin_menu() {
+
+
+	function themeoptions_admin_menu()
+{
  // here's where we add our theme options page link to the dashboard sidebar
   add_theme_page("theme Options", "theme Options", 'edit_themes', basename(__FILE__), 'themeoptions_page');
 }
-
-function themeoptions_page() {
-  // here's the main function that will generate our options page
+function themeoptions_page()
+{
+ // here's the main function that will generate our options page
   if ( $_POST['update_themeoptions'] == 'true' ) { themeoptions_update(); }
-
-?>
+  //if ( get_option() == 'checked'
+  ?>
 <div class="theme-panel">
 	<div id="icon-themes" class="icon32"><br /></div>
 	<h2>Themes options</h2>
@@ -125,7 +128,7 @@ function themeoptions_page() {
 				</table>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td style="padding:20px 0px 20px 0px; border-bottom:#CCC 1px solid;">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -147,11 +150,11 @@ function themeoptions_page() {
 					<tr>
 						<td width="10%"><strong>About images3: </strong></td>
                         <td width="90%"><input type="text" name="images3" id="images3" size="32" value="<?php echo get_option('mytheme_images3'); ?>"/></td>
-					</tr> 
+					</tr>
 				</table>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td style="padding:20px 0px 20px 0px; border-bottom:#CCC 1px solid;">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -169,7 +172,7 @@ function themeoptions_page() {
 				</table>
 			</td>
 		</tr>
-		
+
 		<tr>
 			<td style="padding:20px 0px 20px 0px; border-bottom:#CCC 1px solid;">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -197,7 +200,6 @@ function themeoptions_page() {
 </div>
  <?php
 }
-
 function themeoptions_update()
 {
 	update_option('mytheme_logoname',  $_POST['logoname']);
@@ -211,36 +213,33 @@ function themeoptions_update()
 	update_option('mytheme_map',  $_POST['map']);
 	update_option('mytheme_develop',  $_POST['develop']);
 	update_option('mytheme_phone',  $_POST['phone']);
-	
-		
+
+
 	if ($_POST['display_sidebar']=='on') { $display = 'checked'; } else { $display = ''; }
 	update_option('mytheme_display_sidebar',  $display);
-	 
+
 	if ($_POST['display_search']=='on') { $display = 'checked'; } else { $display = ''; }
 	update_option('mytheme_display_search',  $display);
-	 
+
 	if ($_POST['display_twitter']=='on') { $display = 'checked'; } else { $display = ''; }
 	update_option('mytheme_display_twitter',  $display);
-	 
+
 	update_option('mytheme_twitter_username',  $_POST['twitter_username']);
 }
 add_action('admin_menu', 'themeoptions_admin_menu');
 
-
-add_action('init', 'session_manager'); 
+add_action('init', 'session_manager');
 function session_manager() {
 	if (!session_id()) {
 		session_start();
 	}
 }
-
 add_action('wp_logout', 'session_logout');
 function session_logout() {
 	session_destroy();
 }
 // Register Custom Post Type
 function custom_services_type() {
-
 	$labels = array(
 		'name'                  => _x( 'Services', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Services', 'Post Type Singular Name', 'text_domain' ),
@@ -283,26 +282,21 @@ function custom_services_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,		
+		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
 	register_post_type( 'services_type', $args );
-
 }
 add_action( 'init', 'custom_services_type', 0 );
-
 function ms_image_editor_default_to_gd( $editors ) {
 	$gd_editor = 'WP_Image_Editor_GD';
-
 	$editors = array_diff( $editors, array( $gd_editor ) );
 	array_unshift( $editors, $gd_editor );
-
 	return $editors;
 }
 add_filter( 'wp_image_editors', 'ms_image_editor_default_to_gd' );
-
  /* Add secondary thumbnail (featured image) in posts */
 $thumb = new MultiPostThumbnails(
 	array(
