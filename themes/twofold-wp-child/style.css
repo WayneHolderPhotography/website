@@ -46,3 +46,163 @@
   margin-top: 40% !important;
   color: #fff;
 }
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+
+.img_1 {
+  padding: 8px!important;
+}
+
+.caption p {
+  color: #252525!important;
+}
+
+.img_2 {
+  border: medium none!important;
+  border-radius: 0!important;
+  padding: 0!important;
+}
+
+.caption > h2 {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 40.0625em) {
+  .row .row {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+
+  .column,
+  .columns {
+    padding-left: 0;
+    padding-right: 4px;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  .side_padding {
+    padding: 0 0;
+  }
+
+  .row.masonry-blog .columns {
+    padding: 0 15px 0 0;
+  }
+
+  #header {
+    margin-top: 0;
+  }
+
+  .thb-full-menu-enabled.thb-logo-left #header {
+    margin-top: 0;
+  }
+}
+
+.contact_layout_style2 #wrapper {
+  overflow: inherit;
+}
+
+.light-theme .post.post-detail .post-content a {
+  color: inherit;
+}
+
+@media only screen and (min-width: 48.063em) {
+  .post_nav {
+    visibility: none;
+  }
+
+  .contact-container,
+  .contact-container.style1 {
+    height: 100vh;
+  }
+
+  .contact-content {
+    height: 80vh;
+  }
+}
+
+#header .logo .logoimg {
+  max-height: none;
+}
+
+#header .logo-holder,
+#header .right-holder {
+  display: inherit;
+  align-items: initial;
+}
+
+.navigation-menu li a {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 0;
+  padding: 25px 0;
+  font-weight: 400;
+}
+
+.thb-full-menu {
+  font-size: 24px;
+}
+
+.password-protected .password-form {
+  margin: 40px 0 0;
+}
+
+.wp-caption.alignnone {
+  display: inherit;
+}
+
+.pace {
+  display: block;
+}
+
+.pace:before {
+  width: 62%;
+  background-image: url("http://wayneholderphotography.co.uk/wp-content/uploads/2017/05/LOGO-WAYN1.png");
+  max-height: none;
+  margin: 0 auto 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.lg-sub-html {
+  display: none;
+}
+
+#lg-counter {
+  display: none;
+}
+
+.widget-title,
+.widget h6,
+.cart_totals h2,
+#order_review_heading,
+#side-cart header h6 {
+  display: none;
+}
+
+.contact-container {
+  min-height: 0;
+}
+
+.contact-style2-content {
+  padding: 0;
+}
+
+.contact-content .page-padding {
+  min-height: 0;
+}
+
+.products .product h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.selectric .label {
+  color: #b0b0b0;
+}
