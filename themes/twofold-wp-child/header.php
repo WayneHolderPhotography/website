@@ -78,18 +78,3 @@
                     }
                 </style>
             <?php } ?>
-    <script>
-        jQuery(window).load(function() {
-          // When the page has loaded
-          jQuery(".pace").fadeOut(1000);
-          jQuery("#header").attr("style","width:100%");
-        });
-
-        jQuery(window).scroll(function(){
-            if (jQuery(window).scrollTop() >= 5) {
-                jQuery('header').addClass('smaller');
-            } else {
-                jQuery('header').removeClass('smaller');
-            }
-        });
-    </script>

@@ -31,14 +31,5 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery(document).on("click","#load-more-btn",function(e){
-			jQuery("a.blogtile").show();
-			jQuery(this).hide();
-			return false;
-		})
-	});
-</script>
 
 <?php get_footer(); ?>

@@ -6,10 +6,7 @@
 	Template: twofold-wp
 */
 
-
 @import('./css/main.css');
-@import('./css/style.css');
-
 
 .logoimg.logo_light {
   padding-top: 15px;
@@ -133,6 +130,14 @@
 #header .right-holder {
   display: inherit;
   align-items: initial;
+}
+
+#header {
+  width: 100%;
+}
+
+.old_cal div:nth-child(4) {
+  top: 558px;
 }
 
 .navigation-menu li a {

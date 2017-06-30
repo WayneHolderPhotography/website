@@ -11,11 +11,6 @@
 			</div>
 		</div>
 	</div>
-</div>	
-<script>
-jQuery(document).ready(function(){
-	 $(".old_cal div:nth-child(4)").css("top", "558px");
-});
-</script>
+</div>
 
 <?php get_footer(); ?>

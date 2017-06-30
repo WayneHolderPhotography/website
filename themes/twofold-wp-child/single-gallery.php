@@ -80,43 +80,5 @@
 		</div>
 	</div>
 </div>
-<script>
-	jQuery("document").ready(function(){
-		jQuery(".photo.simple-hover").removeClass("checked");
-
-		var items = [];
-
-    function image_show() {
-      jQuery(".photo.simple-hover.checked").each(function() {
-        var tempurl = extractUrl(jQuery(this).children("a.photo_link").attr('href'));
-        var filename = tempurl.substring(tempurl.lastIndexOf('/') +1 );
-
-        items.push("<p>"+filename+"</p>");
-
-        jQuery("#text-area-img").val(items);
-      });
-    };
-
-    jQuery(document).on('click','.proof-it',function(e) {
-      setTimeout(function() {
-        image_show();
-      }, 3000);
-    });
-  });
-
-  jQuery('.tac').hide();
-
-  jQuery( ".photo.simple-hover" ).click(function() {
-    if (jQuery(".photo.simple-hover.checked").length >=0) {
-      jQuery('.tac').show();
-    } else {
-      jQuery('.tac').hide();
-    }
-  });
-
-  function extractUrl(input) {
-    return input.replace(/"/g,"").replace(/url\(|\)$/ig, "\n");
-  }
-</script>
 
 <?php get_footer(); ?>
