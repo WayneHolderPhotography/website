@@ -3917,51 +3917,50 @@ img.wonderplugin-gridgallery-item-img {
   text-transform: none;
   font-weight: 700;
   letter-spacing: 1px;
-  position: relative
+  position: relative;
 }
 .home-photographer-content-section p {
-  color: #000
+  color: #000;
 }
 .home-photographer-content-section {
-  margin-bottom: 25px
+  margin-bottom: 25px;
 }
 .tp-leftarrow.tparrows.hesperiden {
-  left: -57px!important
+  left: -57px!important;
 }
 .tp-rightarrow.tparrows.hesperiden {
-  left: 105%!important
+  left: 105%!important;
 }
 .hesperiden.tparrows:before {
   font-size: 22px!important;
   color: #ccc!important;
-  background: #fff!important
+  background: #fff!important;
 }
 .bx-pager.bx-default-pager {
-  display: none
+  display: none;
 }
 .contentwrapper {
-  width: auto !Important
+  width: auto !important;
 }
 .home-testimonial .bx-wrapper {
-  margin: 0
+  margin: 0;
 }
 .main-section {
-  margin-top: 68px
+  margin-top: 68px;
 }
 .logo:hover {
-  text-decoration: none!important
+  text-decoration: none!important;
 }
 .row {
   margin-left: 0!important;
-  margin-right: 0!important
+  margin-right: 0!important;
 }
 .smaller {
-  height: 50px!important
+  height: 50px!important;
 }
 article.post.style1.post-282.type-post.status-publish.format-standard.hentry.category-address {
-  display: none
+  display: none;
 }
 article.post.style1.post-271.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-uncategorized {
-  display: none
-}
+  display: none;
 }

@@ -981,60 +981,62 @@ textarea {
     transition: all 500ms ease 0s
   }
   .page-id-88 .p-post>p {
-    font-size: 20px
+    font-size: 20px;
   }
   .banner {
     float: left;
     margin-top: 3%;
-    width: 100%
+    width: 100%;
   }
   .et_right_sidebar #sidebar {
     float: none;
     margin: 0 auto;
     padding-top: 10px;
-    width: 260px
+    width: 260px;
   }
   .entry-content>h1 {
     font-weight: 700;
     height: 41px;
-    padding-top: 52px
+    padding-top: 52px;
   }
-  .post-39 .entry-content>h1 font-weight:700;
-  height:41px;
-  padding-top:52px
+  .post-39 .entry-content>h1 {
+    font-weight:700;
+    height:41px;
+    padding-top:52px;
+  }
 }
 @media only screen and (min-width: 360px) and (max-width: 479px) {
   .page-id-260 .wrapper {
     font-family: Microsoft New Tai Lue;
     margin: 0 auto;
-    width: auto
+    width: auto;
   }
   .page-id-88 .grid-gallery {
-    margin-top: 70px
+    margin-top: 70px;
   }
   #et-top-navigation {
-    float: left
+    float: left;
   }
   #main-header #et_mobile_nav_menu {
     float: left;
     position: absolute;
-    top: 80px
+    top: 80px;
   }
   #top-menu {
     background: black none repeat scroll 0 0;
     float: left;
     padding: 0 0 21px;
-    width: 100%
+    width: 100%;
   }
   #top-menu li {
     border-bottom: 1px solid white;
     float: left;
     padding: 10px 0 0 13px;
-    width: 100%
+    width: 100%;
   }
   #top-menu li>a {
     color: white!important;
-    padding-bottom: 0
+    padding-bottom: 0;
   }
   .crop>img {
     width: 100%!important
@@ -1042,25 +1044,25 @@ textarea {
   .page-id-47 .crop img {
     margin-left: 1px;
     padding-left: 0;
-    width: 77%!important
+    width: 77%!important;
   }
   .page-id-260 .et_right_sidebar #sidebar {
     float: left;
     margin: 0 auto;
     padding-top: 42px;
-    width: 75%
+    width: 75%;
   }
   .xyz {
     margin: 4px 1px 5px 45px;
-    width: 100%
+    width: 100%;
   }
   .abc {
-    margin: 1px 3px 0 38px
+    margin: 1px 3px 0 38px;
   }
   .banner {
     float: left;
     margin-top: 12%;
-    width: 100%
+    width: 100%;
   }
   .grid-gallery-photos figure {
     display: block!important;
@@ -1072,44 +1074,44 @@ textarea {
 p.footr_text {
   color: #909195;
   font-weight: inherit;
-  margin: 59px 6px 7px 5px
+  margin: 59px 6px 7px 5px;
 }
 .contct {
   width: 90%;
   text-align: center;
   color: white;
   background-color: #0f75bd;
-  padding: 5%
+  padding: 5%;
 }
 .page-id-88 .footer-widget {
-  width: 0
+  width: 0;
 }
 .cf-tr:before,
 .cf-tr:after {
   content: " ";
-  display: table
+  display: table;
 }
 .cf-tr:after {
-  clear: both
+  clear: both;
 }
 .cf-tr {
-  *zoom: 1
+  *zoom: 1;
 }
 .testimonial_rotator_wrap {
   margin: 20px 10px;
   padding: 10px;
   overflow: hidden;
-  position: relative
+  position: relative;
 }
 .testimonial_rotator_wrap.with-prevnext {
-  padding: 10px 40px
+  padding: 10px 40px;
 }
 .testimonial_rotator_wrap *,
 .testimonial_rotator_wrap *:before,
 .testimonial_rotator_wrap *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 .testimonial_rotator.format-rotator .slide {
   display: none

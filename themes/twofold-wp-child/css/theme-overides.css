@@ -60,7 +60,7 @@ kbd {
   padding: 0!important
 }
 .caption>h2 {
-  font-size: 29px
+  font-size: 29px;
   font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ kbd {
 @media only screen and (min-width: 64.063em) {
   #header,
   .thb-full-menu-enabled.thb-logo-left #header {
-    margin-top: 0
+    margin-top: 0;
   }
 
   .side_padding {
@@ -110,12 +110,12 @@ kbd {
 
 @media only screen and (min-width: 48.063em) {
   .post_nav {
-    visibility: none;
+    visibility: hidden;
   }
 
   .contact-container {
     height: 100vh;
-    overflow: hidden
+    overflow: hidden;
   }
   .contact-style2-content {
     padding: 0;
@@ -132,8 +132,6 @@ kbd {
 
 #header .logo .logoimg {
   max-height: none;
-}
-
 }
 
 #header .logo-holder,
