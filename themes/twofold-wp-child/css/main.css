@@ -1988,16 +1988,7 @@ label.error {
 .button.formbottom {
   margin-top: 12px
 }
-ul {
-  list-style-type: disc;
-  margin-left: 24px;
-  margin-bottom: 1.5em
-}
-ol {
-  list-style-type: decimal;
-  margin-left: 24px;
-  margin-bottom: 1.5em
-}
+
 .left {
   float: left
 }

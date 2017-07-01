@@ -46,3 +46,5 @@ jQuery(".photo.simple-hover").click(function() {
 function extractUrl(input) {
   return input.replace(/"/g,"").replace(/url\(|\)$/ig, "\n");
 }
+
+c.on("touchmove",function(a){a.preventDefault()})

@@ -1,0 +1,226 @@
+button,
+img,
+legend {
+  border: inherit;
+}
+
+abbr,
+body,
+code,
+kbd {
+  color: inherit;
+}
+
+#wrapper,
+.contact-container,
+.page-padding {
+  min-height: 0;
+}
+
+img {
+  border: inherit;
+}
+
+body {
+  color: #0a0a0a;
+}
+
+.caption>h2 {
+  font-weight: 700;
+}
+
+.collection_album h6 {
+  font-weight: 400;
+}
+
+button {
+  border: inherit;
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left
+}
+
+.img_1 {
+  padding: 8px!important
+}
+.caption p {
+  color: #252525!important
+}
+
+abbr,
+code,
+kbd {
+  color: #0a0a0a
+}
+.img_2 {
+  border: none!important;
+  border-radius: 0!important;
+  padding: 0!important
+}
+.caption>h2 {
+  font-size: 29px
+  font-weight: bold;
+}
+
+@media screen and (min-width: 40.0625em) {
+  .row .row {
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+
+  .column,
+  .columns {
+    padding-left: 0;
+    padding-right: 4px;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  #header,
+  .thb-full-menu-enabled.thb-logo-left #header {
+    margin-top: 0
+  }
+
+  .side_padding {
+    padding: 0;
+  }
+
+  .row.masonry-blog .columns {
+    padding: 0 15px 0 0;
+  }
+}
+
+.page-padding {
+  min-height: 100vh;
+}
+
+#wrapper {
+  min-height: 100vh;
+}
+
+.contact_layout_style2 #wrapper {
+  overflow: visible;
+}
+
+.light-theme .post.post-detail .post-content a {
+  color: inherit;
+}
+
+@media only screen and (min-width: 48.063em) {
+  .post_nav {
+    visibility: none;
+  }
+
+  .contact-container {
+    height: 100vh;
+    overflow: hidden
+  }
+  .contact-style2-content {
+    padding: 0;
+  }
+}
+
+.item {
+  width: auto
+}
+
+.collection_album h6 {
+  font-weight: 700
+}
+
+#header .logo .logoimg {
+  max-height: none;
+}
+
+}
+
+#header .logo-holder,
+#header .right-holder {
+  display: inherit;
+  align-items: inherit;
+}
+
+.navigation-menu li a {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 0;
+  padding: 25px 0;
+  font-weight: 400;
+}
+
+.thb-full-menu {
+  font-size: 24px;
+}
+
+.password-protected .password-form {
+  margin: 40px 0 0;
+  position: relative;
+}
+
+.wp-caption.alignnone {
+  display: inherit;
+}
+
+.comment-respond label,
+.pace,
+.pace:before {
+  display: block
+}
+
+.pace {
+  display: inherit;
+}
+
+.pace {
+  display: block;
+}
+
+.pace:before {
+  width: 500px;
+  background-image: url("http://wayneholderphotography.co.uk/wp-content/uploads/2017/05/LOGO-WAYN1.png");
+  max-height: none;
+  margin: 0 auto 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.lg-sub-html {
+  display: none;
+}
+
+#lg-counter {
+  display: none;
+}
+
+#order_review_heading,
+#side-cart header h6,
+.cart_totals h2,
+.widget h6,
+.widget-title {
+  display: none;
+}
+
+.contact-style2-content {
+  padding: 0;
+}
+
+.contact-style2-content {
+  padding: 0 15px
+}
+
+.contact-content .page-padding {
+  min-height: 0;
+}
+
+.products .product h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.selectric .label {
+  color: #b0b0b0;
+}
