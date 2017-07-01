@@ -6,7 +6,13 @@
 	Template: twofold-wp
 */
 
-@import('./css/main.css');
+@import './css/main.css';
+@import './css/style.css';
+
+a {
+  text-decoration: none;
+  color: #7EBEC5;
+}
 
 .logoimg.logo_light {
   padding-top: 15px;
@@ -14,13 +20,17 @@
 
 .fixed {
   margin-top: -10px;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 99;
 }
 
 .contentwrapper{
   margin: 0 auto!important;
-  float: none;
-  width: 1200px!important;
 }
+
 .bannerwrapper-map-section {
   margin-bottom: 35px;
 }
@@ -129,7 +139,7 @@
 #header .logo-holder,
 #header .right-holder {
   display: inherit;
-  align-items: initial;
+  align-items: inherit;
 }
 
 #header {
