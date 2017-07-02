@@ -47,4 +47,4 @@ function extractUrl(input) {
   return input.replace(/"/g,"").replace(/url\(|\)$/ig, "\n");
 }
 
-c.on("touchmove",function(a){a.preventDefault()})
+// c.on("touchmove",function(a){a.preventDefault()})
