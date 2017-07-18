@@ -8,17 +8,17 @@
 		<div id="newswrapper" class="nav_galley">
 			<div class="row">
 				<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-				<?php if ( post_password_required() ) { get_template_part( 'inc/templates/password-protected' ); } else { ?>
-					<?php 
-						$id = get_the_ID();
-						$album_layout = get_post_meta($id, 'gallery_layout', true) ? get_post_meta($id, 'gallery_layout', true) : 'style1';
-						get_template_part( 'inc/templates/galleries/'.$album_layout );
-					?>
+          <?php if ( post_password_required() ) { get_template_part( 'inc/templates/password-protected' ); } else { ?>
+            <?php
+              $id = get_the_ID();
+              $album_layout = get_post_meta($id, 'gallery_layout', true) ? get_post_meta($id, 'gallery_layout', true) : 'style1';
+              get_template_part( 'inc/templates/galleries/'.$album_layout );
+            ?>
 					
-					<div class="row">
-							<div class="col span_12 tac">
-								<a href="#" id="load-more-btn" class="btn btn-primary bt_an_trans sumbit-bu" data-toggle="modal"  data-target="#myModal">Submit</a>
-								  <div class="modal fade" id="myModal" role="dialog">
+					  <div class="row">
+              <div class="col span_12 tac">
+							  <a href="#" id="load-more-btn" class="btn btn-primary bt_an_trans sumbit-bu" data-toggle="modal"  data-target="#myModal">Submit</a>
+								<div class="modal fade" id="myModal" role="dialog">
 								<div class="modal-dialog">
 					<?php //if ( comments_open() || get_comments_number() ) : ?>
 						

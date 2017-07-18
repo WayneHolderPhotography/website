@@ -15,71 +15,47 @@ function enqueue_javascript() {
   wp_enqueue_script( 'main_javascript', get_stylesheet_directory_uri().'/js/main.js', array('jquery'), '1.0.0', true);
 }
 
-
-	/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function twentyseventeen_widgets_init() {
+function twofold_child_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'twentyseventeen' ),
+		'name'          => __( 'Sidebar', 'twofold-wp-child' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyseventeen' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twofold-wp-child' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer logo Section', 'twentyseventeen' ),
-		'id'            => 'footer-logo-section',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'name'          => __( 'Footer Column Left', 'twofold-wp-child' ),
+		'id'            => 'footer-column-left',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twofold-wp-child' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Blog Section', 'twentyseventeen' ),
-		'id'            => 'footer-blog',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'name'          => __( 'Footer Column Centre Left', 'twofold-wp-child' ),
+		'id'            => 'footer-column-center-left',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twofold-wp-child' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 		register_sidebar( array(
-		'name'          => __( 'Usefull Links', 'twentyseventeen' ),
-		'id'            => 'footer-userfull-links',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'name'          => __( 'Footer Column Centre Right', 'twofold-wp-child' ),
+		'id'            => 'footer-column-center-right',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twofold-wp-child' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 			register_sidebar( array(
-		'name'          => __( 'Footer Map Section', 'twentyseventeen' ),
-		'id'            => 'footer-map-section',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer Settings', 'twentyseventeen' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer Destinations', 'twentyseventeen' ),
-		'id'            => 'sidebar-4',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'name'          => __( 'Footer Column Right', 'twofold-wp-child' ),
+		'id'            => 'footer-column-right',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twofold-wp-child' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -87,7 +63,7 @@ function twentyseventeen_widgets_init() {
 	) );
 
 }
-add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
+add_action( 'widgets_init', 'twofold_child_widgets_init' );
 add_action( 'init', 'my_add_excerpts_to_pages' );
 
 function my_add_excerpts_to_pages() {
@@ -200,7 +176,7 @@ function themeoptions_page() {
 <?php }
 
 function themeoptions_update() {
-	update_option('mytheme_logoname',  $_POST['logoname']);
+    update_option('mytheme_logoname',  $_POST['logoname']);
 	update_option('mytheme_email',  $_POST['email']);
 	update_option('mytheme_aboutimage',  $_POST['aboutimage']);
 	update_option('mytheme_images1',  $_POST['images1']);
@@ -299,7 +275,6 @@ function ms_image_editor_default_to_gd( $editors ) {
 }
 
 add_filter( 'wp_image_editors', 'ms_image_editor_default_to_gd' );
- /* Add secondary thumbnail (featured image) in posts */
 $thumb = new MultiPostThumbnails(
 	array(
 		'label' => 'Secondary Image',

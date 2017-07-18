@@ -7,16 +7,27 @@
 */
 
 @import './css/theme-overides.css';
-@import './css/main.css';
-@import './css/style.css';
+@import './css/revslider.css';
+
 
 a {
   text-decoration: none;
   color: #7EBEC5;
 }
 
-.logoimg.logo_light {
-  padding-top: 15px;
+html,
+body {
+  color: #252525;
+  font-family: "maison_neuebook", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  height: auto;
+  position: relative;
+  padding-top: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased
 }
 
 .fixed {
@@ -26,6 +37,10 @@ a {
   left:0;
   width: 100%;
   z-index: 99;
+}
+
+.slider {
+  margin-bottom: 10px;
 }
 
 .contentwrapper{
@@ -43,18 +58,6 @@ a {
   margin-bottom:0px;
 }
 
-.home-page-section .section-full-width .section-title {
-  padding: 13px 0 !important;
-}
-
-.home-page-section .content-box {
-  min-height: auto !important;
-}
-
-.footer-section {
-  float: left !important;
-  margin-top: 25px !important;
-}
 #wonderplugingridgallery-1 .wonderplugin-gridgallery-item-title {
   font-size: 25px !important;
   margin-top: 40% !important;
@@ -70,23 +73,18 @@ a {
   overflow: inherit;
 }
 
-@media only screen and (min-width: 48.063em) {
-  .contact-container,
-  .contact-container.style1 {
-    height: 100vh;
-  }
-
-  .contact-content {
-    height: 80vh;
-  }
-}
-
 #header .logo .logoimg {
   max-height: none;
 }
 
 #header {
   width: 100%;
+  color: #252525;
+}
+
+#header a:link,
+#header a:visited {
+  color: #252525;
 }
 
 .old_cal div:nth-child(4) {
@@ -97,14 +95,624 @@ a {
   font-size: 24px;
 }
 
-.contact-container {
-  min-height: 0;
-}
-
 a .light-theme a {
   color: inherit;
 }
 
 #wrapper .contact_layout_style2 #wrapper{
   overflow: inherit;
+}
+
+.home-content-box {
+  color: #000;
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.home-content-box h2,
+.home-content-box h3,
+.home-content-box h4 {
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-content-box h2,
+  .home-content-box h3,
+  .home-content-box h4 {
+    font-size: 24px;
+  }
+}
+
+
+.bannerimage {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.footer {
+  background-color: #151515;
+  padding: 30px 0;
+}
+
+h1,
+h2 {
+  font-family: "maison_neuebold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+}
+
+h2 {
+  color: #000;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.smaller {
+  height: 50px;
+}
+
+.showonsuccess {
+  display: none
+}
+
+.testimonial {
+  font-family: "maison_neuebold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 1.3em;
+  letter-spacing: 2px;
+}
+
+.post {
+  margin-bottom: 50px;
+}
+
+.page {
+  padding: 20px 70px;
+}
+
+@media only screen and (max-width: 649px) {
+  .columns.small-12 + .columns.small-12 {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page {
+    padding: 50px 10px;
+  }
+
+  .bannerimage {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .thb-full-menu {
+    font-size: 15px;
+  }
+}
+
+.head-back .page {
+  padding-top: 0;
+}
+
+.pace.pace-inactive {
+  display: none
+}
+
+.pace-progress {
+  display: none;
+}
+
+.title_ab {
+  color: #fff;
+}
+
+.bannerimage .textoverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .15)
+}
+.bannerimage .textoverlay div {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+.bannerimage .textoverlay div h1 {
+  font-size: 87px;
+  margin-bottom: 10px;
+  color: #FFF;
+}
+
+.bannerimage .textoverlay div h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+  color: #FFF;
+}
+
+.bannerimage img {
+  width: 100%;
+}
+
+.btn:hover {
+  background: #ffffff;
+  border: 2px solid #000000;
+}
+
+.footer li {
+  border-bottom: 1px dotted gray;
+  padding-bottom: 5px
+}
+
+.rpwwt-widget ul li .rpwwt-post-author,
+.rpwwt-widget ul li .rpwwt-post-date,
+.rpwwt-widget ul li .rpwwt-post-title,
+.widget.widget_nav_menu ul li a {
+  color: gray
+}
+
+#wp-calendar {
+  empty-cells: show;
+  margin: 0 auto 0;
+  width: 100%
+}
+#wp-calendar a {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  color: #9f9f9f!important
+}
+#wp-calendar a:hover {
+  text-decoration: underline
+}
+#wp-calendar caption {
+  text-decoration: none;
+  font: bold 13px Arial, Sans-Serif;
+  color: #9f9f9f!important
+}
+#wp-calendar td {
+  padding: 3px 11px;
+  color: #9f9f9f;
+  text-align: center;
+}
+#wp-calendar td#today {
+  font-weight: 700;
+  color: #fff!important
+}
+#wp-calendar th {
+  font-style: normal;
+  text-transform: capitalize;
+  padding: 3px 5px;
+  color: #9f9f9f!important
+}
+#wp-calendar #prev a,
+#wp-calendar #next a {
+  font-size: 10pt
+}
+#wp-calendar #next a {
+  padding-right: 0px!important;
+  text-align: right
+}
+#wp-calendar #prev a {
+  padding-left: 10px;
+  text-align: left
+}
+
+.password-protected {
+  height: auto;
+  padding: 15px;
+}
+
+.wpcf7 label {
+  width: 100%;
+}
+.selectric .label {
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.wpcf7-form-control-wrap {
+  margin-bottom: 10px;
+}
+
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-textarea,
+.selectric{
+  background-color: #f6f6f6;
+  border: 1px solid #4e4e4e;
+  width: 100%;
+  font-size: 16px;
+  height: 40px;
+  line-height: 1.2em;
+  margin-bottom: 0px;
+  outline: medium none;
+  padding: 10px 10px;
+  transition: all 0.2s ease 0s;
+  width: 100%;
+}
+
+.selectric-wrapper,
+.selectric {
+  display: block;
+  height:auto;
+}
+.selectric .button {
+  right:10px;
+  top:10px;
+}
+
+.selectric-items {
+  width: 100%!important;
+}
+.wpcf7-response-output.wpcf7-validation-errors {
+  color: red
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: #0f75bd
+}
+
+.wpcf7-form-control.wpcf7-submit {
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #151515;
+  background: 0 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #151515;
+  line-height: 34px;
+  padding: 0 35px;
+}
+
+.portfoliotile a,
+.portfoliotile .title,
+.portfoliotile .subtitle {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.blogtile .date {
+  color: darkgrey;
+  display: block;
+}
+.blogtile a .overlay {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  opacity: 1;
+  background-color: transparent;
+  color: #252525;
+  padding: 0
+}
+.portfoliotile a .overlay {
+  display: flex;
+  text-align: center;
+}
+
+.portfoliotile a .overlay .liner {
+  align-self: center;
+  width: 100%;
+}
+
+.portfoliotile .title  {
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+}
+.portfoliotile a .subtitle  {
+  font-size: 17px;
+}
+
+.portfoliotile,
+.blogtile {
+  margin-bottom: 20px
+}
+.portfoliotile a {
+  display: block;
+  position: relative
+}
+.portfoliotile a img {
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: block
+}
+.portfoliotile a .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, .7);
+  padding: 0 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+.portfoliotile a .liner {
+  display: block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.portfoliotile a .title,
+.blogtile a .title {
+  font-size: 45px;
+  font-family: "maison_neuebold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: block;
+  line-height: 1.2em;
+}
+
+.blogtile a .title {
+  font-size: 28px;
+}
+.portfoliotile a .subtitle {
+  font-size: 21px;
+  display: block;
+  line-height: 1.2em;
+  margin-top: 7px;
+}
+
+.portfoliotile a:hover {
+  color: #252525
+}
+.portfoliotile a:hover .overlay {
+  opacity: 1
+}
+
+@media only screen and (min-width: 1100px) {
+  .portfoliotile a .title {
+    font-size: 35px
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .portfoliotile a .title {
+    font-size: 28px
+  }
+  .portfoliotile a .subtitle {
+    font-size: 17px
+  }
+  .portfoliotile a {
+    text-decoration: none
+  }
+  .portfoliotile a,
+  .portfoliotile .title,
+  .portfoliotile .subtitle {
+    color: #252525;
+  }
+  .portfoliotile a .overlay {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 1;
+    background-color: transparent;
+    padding: 0;
+  }
+  .portfoliotile a .overlay .liner {
+    top: auto;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.post h1 {
+  margin-bottom: 14px;
+  color: #000!important;
+  font-size: 40px;
+  letter-spacing: -.5px;
+}
+
+/*.portfolio,*/
+/*.blogs {*/
+  /*margin: 0 -.9375rem;*/
+/*}*/
+
+
+#header {
+  margin-top: 0;
+  padding: 0 .9375rem!important;
+  display: flex;
+  height: 70px;
+  transition: height .3s;
+  -webkit-transition: height .3s;
+}
+
+#header.smaller {
+  height: 50px;
+}
+
+#header .logo .logoimg {
+  font-size: 24px;
+  font-family: Rajdhani;
+  letter-spacing: 1px;
+  padding-top: 10px;
+}
+
+#header .mobile-toggle {
+  display: none
+}
+
+@media only screen and (min-width: 768px) {
+  #navigation-menu,
+  .menu_overlay {
+    display: none!important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #header .mobile-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+  }
+
+  .bannerimage {
+    margin-right: -.9375rem;
+    margin-left: -.9375rem;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  #header .mobile-toggle svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .bannerimage .textoverlay div h1 {
+    font-size: 30px;
+  }
+
+  #header .logo {
+    float: left;
+  }
+
+  #header .logo-holder {
+    width: 100%;
+    position: relative;
+  }
+
+  #header .logo .logoimg {
+    padding-top: 5px;
+  }
+
+  #header.smaller,
+  #header {
+    height: 80px;
+  }
+  .page {
+    padding-top: 0;
+  }
+  .portfoliotile,
+  .blogtile,
+  .blogtile a .overlay {
+    margin-bottom: 0;
+  }
+
+  body {
+    padding-top: 50px;
+  }
+
+  .bannerimage .textoverlay div h2 {
+    font-size: 16px;
+  }
+
+  .bannerimage {
+    margin-bottom: 10px;
+  }
+
+  .portfoliotile a .title,
+  .blogtile a .title {
+    font-size: 18px
+  }
+
+  .blogtile .date {
+    font-size: 12px;
+  }
+
+  .post h1 {
+    font-size: 30px;
+  }
+}
+
+.head-back {
+  background-color: #FFFFFF;
+}
+
+.head-back .page {
+  padding-bottom: 0;
+}
+
+#header .logo-holder,
+#header .right-holder {
+  display: flex;
+  align-items: center
+}
+.right-holder {
+  float: right
+}
+
+#navigation-menu {
+  background: #252525 none repeat scroll 0 0;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  left: 0;
+  letter-spacing: 1px;
+  max-width: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  width: 260px;
+  z-index: 99;
+}
+
+#navigation-menu a {
+  padding: 25px 0 25px 17px;
+}
+
+#navigation-menu li {
+  border-bottom: 2px solid #362f2d;
+}
+
+.thb-full-menu {
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .thb-full-menu {
+    display: flex;
+  }
+}
+
+.bx-wrapper .bx-controls-direction a {
+  z-index: 10;
+}
+
+.images ul {
+  list-style-type: none;
+}
+
+.images img {
+  max-height: 900px;
+  max-width: 1350px;
+  width: 100%;
+  height: 100%;
+}
+
+.images img + img {
+  margin-top: 15px;
+}
+
+.blogtile:nth-child(n+7) {
+  display: none;
 }

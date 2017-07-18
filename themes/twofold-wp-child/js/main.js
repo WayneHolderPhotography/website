@@ -1,15 +1,10 @@
 // Blog
-jQuery(document).on("click", "#load-more-btn", function() {
-  jQuery("a.blogtile").show();
-  jQuery(this).hide();
-
-  return false;
-});
-
-// Header
-jQuery(window).load(function() {
-  jQuery(".pace").fadeOut(1000);
-});
+// jQuery(document).on("click", "#load-more-btn", function() {
+//   jQuery("a.blogtile").show();
+//   jQuery(this).hide();
+//
+//   return false;
+// });
 
 jQuery(window).scroll(function(){
   jQuery('header').toggleClass('smaller', jQuery(window).scrollTop() >= 5);
@@ -36,9 +31,7 @@ jQuery(document).on('click','.proof-it',function(e) {
     image_show();
   }, 3000);
 });
-
-jQuery('.tac').hide();
-
+git
 jQuery(".photo.simple-hover").click(function() {
   jQuery('.tac').toggle(jQuery(".photo.simple-hover.checked").length >=0);
 });
@@ -47,4 +40,8 @@ function extractUrl(input) {
   return input.replace(/"/g,"").replace(/url\(|\)$/ig, "\n");
 }
 
-// c.on("touchmove",function(a){a.preventDefault()})
+jQuery(document).on("click","#load-more-btn",function(e) {
+  jQuery(".blogtile").show();
+  jQuery(this).hide();
+  return false;
+});

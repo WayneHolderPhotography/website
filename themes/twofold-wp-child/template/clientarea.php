@@ -2,8 +2,8 @@
 /*
 Template Name:client area
 */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 <div class="page">
     <div class="contentwrapper">
         <div class="album-title">

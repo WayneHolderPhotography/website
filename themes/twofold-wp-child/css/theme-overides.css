@@ -37,10 +37,10 @@ button {
   border: inherit;
 }
 
-.column:last-child:not(:first-child),
-.columns:last-child:not(:first-child) {
-  float: left
-}
+/*.column:last-child:not(:first-child),*/
+/*.columns:last-child:not(:first-child) {*/
+  /*float: left*/
+/*}*/
 
 .img_1 {
   padding: 8px!important
@@ -70,11 +70,11 @@ kbd {
     margin-right: inherit;
   }
 
-  .column,
-  .columns {
-    padding-left: 0;
-    padding-right: 4px;
-  }
+  /*.column,*/
+  /*.columns {*/
+    /*padding-left: 0;*/
+    /*padding-right: 4px;*/
+  /*}*/
 }
 
 @media only screen and (min-width: 64.063em) {
@@ -100,14 +100,11 @@ kbd {
   min-height: 100vh;
 }
 
-.contact_layout_style2 #wrapper {
-  overflow: visible;
+@media only screen and (max-width: 1024px) {
+  .thb-full-menu>li a {
+    font-size: 16px;
+  }
 }
-
-.light-theme .post.post-detail .post-content a {
-  color: inherit;
-}
-
 @media only screen and (min-width: 48.063em) {
   .post_nav {
     visibility: hidden;
@@ -120,10 +117,6 @@ kbd {
   .contact-style2-content {
     padding: 0;
   }
-}
-
-.item {
-  width: auto
 }
 
 .collection_album h6 {
@@ -155,10 +148,6 @@ kbd {
 .password-protected .password-form {
   margin: 40px 0 0;
   position: relative;
-}
-
-.wp-caption.alignnone {
-  display: inherit;
 }
 
 .comment-respond label,
@@ -195,8 +184,7 @@ kbd {
 #order_review_heading,
 #side-cart header h6,
 .cart_totals h2,
-.widget h6,
-.widget-title {
+.widget h6 {
   display: none;
 }
 
@@ -212,13 +200,6 @@ kbd {
   min-height: 0;
 }
 
-.products .product h3 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 7px;
-}
-
 .selectric .label {
   color: #b0b0b0;
 }
@@ -226,3 +207,30 @@ kbd {
 .testimonial-page {
   padding-top: 60px;
 }
+
+.widget-title {
+  color: inherit;
+  text-align: left;
+}
+
+.widget {
+  background: transparent;
+}
+
+.thb-full-menu>li a {
+  font-weight: 400;
+}
+
+#header {
+  position: static;
+  height: 60px;
+}
+
+.footer {
+  background-color: #000;
+  width: 100%
+}
+
+
+
+

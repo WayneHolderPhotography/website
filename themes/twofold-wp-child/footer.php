@@ -1,43 +1,31 @@
-</div> <!-- End #wrapper -->
-<!-- Start Footer -->
-<div class="footer">
-    <div class="page">
-        <div class="">
-            <div id="text-3" class="small-12 large-3 footer-section">
-                <div class="textwidget">
-                    <ul class="creted">
-                        <?php dynamic_sidebar( 'footer-logo-section' ); ?>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="text-3" class="small-12 large-3 footer-section">
-                <div class="textwidget">
-                    <ul class="creted">
-                        <?php dynamic_sidebar( 'footer-userfull-links' ); ?>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="text-3" class="small-12 large-3 footer-section">
-                <div class="textwidget">
-                    <ul class="creted">
-                        <?php dynamic_sidebar( 'footer-blog' ); ?>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="text-3" class="small-12 large-3 footer-section">
-                <div class="textwidget">
-                    <ul class="creted">
-                        <?php dynamic_sidebar( 'footer-map-section' ); ?>
-                    </ul>
-                </div>
-            </div>
+  </div> <!-- End #wrapper -->
+  <!-- Start Footer -->
+  <footer>
+    <div class="footer page">
+      <div class="row">
+        <div class="small-12 large-3 columns">
+          <?php dynamic_sidebar( 'footer-column-left' ); ?>
         </div>
-    </div>
-</div><!-- End Footer -->
 
-<?php wp_footer(); ?>
+        <div class="small-12 large-3 columns">
+          <?php dynamic_sidebar( 'footer-column-center-left' ); ?>
+        </div>
+
+        <div class="small-12 large-3 columns">
+          <?php dynamic_sidebar( 'footer-column-center-right' ); ?>
+        </div>
+
+        <div class="small-12 large-3 columns">
+          <?php dynamic_sidebar( 'footer-column-right' ); ?>
+        </div>
+      </div>
+    </div><!-- End Footer -->
+  </footer>
+
+  <?php wp_footer(); ?>
+
+  <?php if(!is_home() || !is_front_page()) : ?>
+    <script> Pace.stop(); </script>
+   <?php endif; ?>
 </body>
 </html>

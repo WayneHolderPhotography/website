@@ -1,0 +1,11 @@
+.hephaistos.tparrows {
+  border-radius: 0;
+}
+
+.hephaistos.tparrows.tp-rightarrow:before {
+  content: '\e825';
+}
+
+.hephaistos.tparrows.tp-leftarrow:before {
+  content: '\e824';
+}

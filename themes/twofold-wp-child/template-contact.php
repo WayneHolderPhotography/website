@@ -4,10 +4,14 @@ Template Name: Contact
 */
 ?>
 <?php get_header(); ?>
-<?php 
-	$locations = ot_get_option('map_locations'); 
-	$contact_shortcode = get_post_meta(get_the_ID(), 'contact_shortcode', true);
-?>
+<div class="row">
+  <div class="column">
+    <?php
+      $locations = ot_get_option('map_locations');
+      $contact_shortcode = get_post_meta(get_the_ID(), 'contact_shortcode', true);
+    ?>
+  </div>
+</div>
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 <div id="contact_area" class="contact-container">
 	<div class="contact-content">

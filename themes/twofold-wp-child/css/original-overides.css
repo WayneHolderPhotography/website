@@ -1,0 +1,43 @@
+/*Contact.scss*/
+.contact-container {
+  min-height: 0;
+}
+@media only screen and (min-width: 48.063em) {
+  .contact-container,
+  .contact-container.style1 {
+    height: 100vh;
+  }
+
+  .contact-content {
+    height: 80vh;
+  }
+}
+
+/*photo.scss*/
+.item {
+  width: auto;
+}
+
+/*post.scss*/
+.light-theme .post.post-detail .post-content a {
+  color: inherit;
+}
+
+/*structure.scss*/
+.contact_layout_style2 #wrapper {
+  overflow: visible;
+}
+
+/*woocommerce.scss*/
+.products .product h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+/*wpspecific.scss*/
+.wp-caption.alignnone {
+  display: inherit;
+}
+

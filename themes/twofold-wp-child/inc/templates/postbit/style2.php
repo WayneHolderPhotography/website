@@ -1,4 +1,4 @@
-<div class="small-12 medium-10 large-9 columns">
+<div class="large-4 small-6 columns">
 	<article itemscope itemtype="http://schema.org/Article" <?php post_class('post post-detail style2'); ?> role="article">
 		<?php if ( has_post_thumbnail() ) { ?>
 		<figure class="post-gallery">
