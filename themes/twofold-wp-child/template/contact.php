@@ -5,6 +5,7 @@ Template Name:contact us
 get_header(); ?>
 
 <div class="page">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <div class="row">
     <div class="column">
       <div class="bannerimage">
@@ -19,14 +20,11 @@ get_header(); ?>
 
   <div class="row">
     <div class="large-6 small-12 columns">
-      <?php
-        $post = get_post(282);
-      ?>
-      <h2><?php echo $post->post_title; ?></h2>
-      <p><?php echo $post->post_content; ?></p>
+      <h2><?php the_title(); ?></h2>
+      <p><?php the_content(); ?></p>
     </div>
     <div class="large-6 small-12 columns">
-      <h2>Contact</h2>
+      <h2>Enquiries</h2>
       <form action="" class="ajaxform" method="post" accept-charset="utf-8">
         <?php echo do_shortcode( '[contact-form-7 id="4" title="Contact form 1"]' ); ?>
       </form>
@@ -34,6 +32,9 @@ get_header(); ?>
     </div>
   </div>
 </div>
+<?php endwhile; else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <?php endif; ?>
 </div>
- 
+
  <?php get_footer(); ?>

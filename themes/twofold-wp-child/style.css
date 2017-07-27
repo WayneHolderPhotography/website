@@ -487,6 +487,9 @@ h2 {
 }
 
 @media only screen and (max-width: 1024px) {
+  .page {
+    padding: 20px;
+  }
   .portfoliotile a .title {
     font-size: 28px
   }
@@ -528,7 +531,7 @@ h2 {
 
 /*.portfolio,*/
 /*.blogs {*/
-  /*margin: 0 -.9375rem;*/
+/*margin: 0 -.9375rem;*/
 /*}*/
 
 
