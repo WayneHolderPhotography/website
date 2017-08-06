@@ -520,6 +520,14 @@ h2 {
     -webkit-transform: translateY(0);
     transform: translateY(0)
   }
+
+  .thb-full-menu {
+    padding-top: 17px;
+  }
+
+  .thb-full-menu>li a {
+    font-size: 13px;
+  }
 }
 
 .post h1 {
